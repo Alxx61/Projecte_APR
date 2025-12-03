@@ -1,0 +1,57 @@
+\hypertarget{classcomparadores_1_1_comparador_fechas}{}\doxysection{comparadores.\+Comparador\+Fechas Class Reference}
+\label{classcomparadores_1_1_comparador_fechas}\index{comparadores.ComparadorFechas@{comparadores.ComparadorFechas}}
+
+
+Implementación de \mbox{\hyperlink{classcomparadores_1_1_comparator}{Comparator}} para ordenar objetos Publicacion basándose en su atributo de fecha (formato \char`\"{}\+AAAAMM\char`\"{}).  
+
+
+Inheritance diagram for comparadores.\+Comparador\+Fechas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcomparadores_1_1_comparador_fechas}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcomparadores_1_1_comparador_fechas_af54852b3d0f60114c6283c8ee906cc40}{compare}} (self, p1, p2)
+\begin{DoxyCompactList}\small\item\em Compara dos publicaciones basándose en sus fechas (\char`\"{}\+AAAAMM\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de \mbox{\hyperlink{classcomparadores_1_1_comparator}{Comparator}} para ordenar objetos Publicacion basándose en su atributo de fecha (formato \char`\"{}\+AAAAMM\char`\"{}). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcomparadores_1_1_comparador_fechas_af54852b3d0f60114c6283c8ee906cc40}\label{classcomparadores_1_1_comparador_fechas_af54852b3d0f60114c6283c8ee906cc40}} 
+\index{comparadores.ComparadorFechas@{comparadores.ComparadorFechas}!compare@{compare}}
+\index{compare@{compare}!comparadores.ComparadorFechas@{comparadores.ComparadorFechas}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily def comparadores.\+Comparador\+Fechas.\+compare (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p1,  }\item[{}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Compara dos publicaciones basándose en sus fechas (\char`\"{}\+AAAAMM\char`\"{}). 
+
+Si ambas fechas (obtenidas de p1 y p2) son distintas de None, el método retorna un entero negativo si la fecha de p1 es anterior a la de p2, cero si las fechas son iguales, o un entero positivo si la fecha de p1 es posterior a la de p2.
+
+El método también maneja los casos en que una o ambas fechas sean nulas (asumiendo que nulo es \char`\"{}menor\char`\"{} que cualquier fecha).
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & La primera publicación a comparar. \\
+\hline
+{\em p2} & La segunda publicación a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un entero negativo si la fecha de p1 es anterior a la de p2, cero si las fechas son iguales, o un entero positivo si la fecha de p1 es posterior a la de p2. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcomparadores_1_1_comparator_a56252f6521b20d261491c3f53ada3d97}{comparadores.\+Comparator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comparadores.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{classmiio_1_1_lector_publicaciones}{}\doxysection{miio.\+Lector\+Publicaciones Class Reference}
+\label{classmiio_1_1_lector_publicaciones}\index{miio.LectorPublicaciones@{miio.LectorPublicaciones}}
+
+
+Clase de utilidad para leer (parsear) un archivo de texto y cargar los datos de publicaciones en un mapa.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmiio_1_1_lector_publicaciones_a5c2a632054a65a0cfdd1c1be24dbfc95}{leer}} (nombre\+\_\+archivo)
+\begin{DoxyCompactList}\small\item\em Lee un archivo de texto estructurado y lo convierte en un mapa de objetos Publicacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de utilidad para leer (parsear) un archivo de texto y cargar los datos de publicaciones en un mapa. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmiio_1_1_lector_publicaciones_a5c2a632054a65a0cfdd1c1be24dbfc95}\label{classmiio_1_1_lector_publicaciones_a5c2a632054a65a0cfdd1c1be24dbfc95}} 
+\index{miio.LectorPublicaciones@{miio.LectorPublicaciones}!leer@{leer}}
+\index{leer@{leer}!miio.LectorPublicaciones@{miio.LectorPublicaciones}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily def miio.\+Lector\+Publicaciones.\+leer (\begin{DoxyParamCaption}\item[{}]{nombre\+\_\+archivo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lee un archivo de texto estructurado y lo convierte en un mapa de objetos Publicacion. 
+
+Toda la información de una única publicación debe estar en una sola línea. Los datos de la publicación estarán separados por delimitadores.
+
+A continuación se listan dichos delimitadores\+:
+\begin{DoxyItemize}
+\item {\bfseries{Delimitador de Campo Principal (atributo)\+:}} {\ttfamily ;} (Punto y coma)
+\item {\bfseries{Delimitador de Listas (para autores o palabras clave)\+:}} {\ttfamily $\vert$} (Barra vertical)
+\item {\bfseries{Delimitador de nombre, apellido de Autor\+:}} {\ttfamily \+:} (Dos puntos)
+\end{DoxyItemize}\hypertarget{classmiio_1_1_lector_publicaciones_autotoc_md0}{}\doxyparagraph{Formato de Línea LIBRO}\label{classmiio_1_1_lector_publicaciones_autotoc_md0}
+\begin{DoxyVerb}TIPO;ID;TITULO;FECHA_AAAAMM;AUTORES;PALABRAS_CLAVE;EDITORIAL
+\end{DoxyVerb}
+ Donde TIPO es \char`\"{}\+LIBRO\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Ejemplo AUTORES\+:}} {\ttfamily \char`\"{}\+Robert C.\+:\+Martin\+:\+N/\+A$\vert$\+Erich\+:\+Gamma\+:\+N/\+A\char`\"{}}
+\item {\bfseries{Ejemplo PALABRAS\+\_\+\+CLAVE\+:}} {\ttfamily \char`\"{}design$\vert$patterns$\vert$gof$\vert$oop\char`\"{}}
+\end{DoxyItemize}
+
+Ejemplo de línea para Libro\+: \char`\"{}\+LIBRO;\+LIB-\/003;\+Design Patterns...;199410;\+Erich\+:\+Gamma\+:\+N/\+A$\vert$...;design$\vert$patterns;\+Addison-\/\+Wesley\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+\_\+archivo} & El path (ruta) y nombre del archivo a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un diccionario (Dict\mbox{[}str, Publicacion\mbox{]}) donde la clave es el ID de la publicación. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+miio.\+py\end{DoxyCompactItemize}

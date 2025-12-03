@@ -1,0 +1,89 @@
+\hypertarget{classcorrector_1_1_corrector_de_ejecutor}{}\doxysection{corrector.\+Corrector\+De\+Ejecutor Class Reference}
+\label{classcorrector_1_1_corrector_de_ejecutor}\index{corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}}
+
+
+Clase encargada de corregir la ejecución del programa y asignar una nota.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcorrector_1_1_corrector_de_ejecutor_1_1___resultado_comparacion}{\+\_\+\+Resultado\+Comparacion}}
+\begin{DoxyCompactList}\small\item\em Clase interna (estructura) para almacenar el resultado de una comparación de línea. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcorrector_1_1_corrector_de_ejecutor_a486a238fc0cbaa0ab11cff0dfe1adb6a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_aa8bfe31188e91b995c33fd9612f3d52b}\label{classcorrector_1_1_corrector_de_ejecutor_aa8bfe31188e91b995c33fd9612f3d52b}} 
+def {\bfseries corrige\+\_\+gestion\+\_\+en\+\_\+memoria} (self)
+\begin{DoxyCompactList}\small\item\em Punto de entrada principal para la corrección de la gestión en memoria. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classcorrector_1_1_corrector_de_ejecutor_a52fe838ce34bef7bd6844c4859710eb2}{get\+\_\+nota\+\_\+gestion\+\_\+en\+\_\+memoria}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve la nota de gestión en memoria. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcorrector_1_1_corrector_de_ejecutor_a2233fa2842deb9a7efc9c94a3bb039f7}{corrige\+\_\+resultado}} (self, obtenido, referencia)
+\begin{DoxyCompactList}\small\item\em Compara los dos listas de strings (obtenido y referencia) y calcula una nota. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_a2eb0f01923e4a408e924b98eadabcd28}\label{classcorrector_1_1_corrector_de_ejecutor_a2eb0f01923e4a408e924b98eadabcd28}} 
+float {\bfseries get\+\_\+nota\+\_\+lectura\+\_\+fichero} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el resultado final acumulado de lectura. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_afdf05944b65fbd3fb595d8e9958275b9}\label{classcorrector_1_1_corrector_de_ejecutor_afdf05944b65fbd3fb595d8e9958275b9}} 
+def {\bfseries corrige\+\_\+lectura\+\_\+archivo} (self)
+\begin{DoxyCompactList}\small\item\em Método principal de ejecución para corrección de ficheros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase encargada de corregir la ejecución del programa y asignar una nota. 
+
+Compara la salida generada por Ejecutor\+Desde\+Memoria con un fichero de referencia y valida la lectura de archivos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_a486a238fc0cbaa0ab11cff0dfe1adb6a}\label{classcorrector_1_1_corrector_de_ejecutor_a486a238fc0cbaa0ab11cff0dfe1adb6a}} 
+\index{corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def corrector.\+Corrector\+De\+Ejecutor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Inicializa notas a 0. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_a2233fa2842deb9a7efc9c94a3bb039f7}\label{classcorrector_1_1_corrector_de_ejecutor_a2233fa2842deb9a7efc9c94a3bb039f7}} 
+\index{corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}!corrige\_resultado@{corrige\_resultado}}
+\index{corrige\_resultado@{corrige\_resultado}!corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}}
+\doxysubsubsection{\texorpdfstring{corrige\_resultado()}{corrige\_resultado()}}
+{\footnotesize\ttfamily def corrector.\+Corrector\+De\+Ejecutor.\+corrige\+\_\+resultado (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obtenido,  }\item[{}]{referencia }\end{DoxyParamCaption})}
+
+
+
+Compara los dos listas de strings (obtenido y referencia) y calcula una nota. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obtenido} & Lista de strings generada por el alumno. \\
+\hline
+{\em referencia} & Lista de strings esperada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La nota calculada sobre 10. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcorrector_1_1_corrector_de_ejecutor_a52fe838ce34bef7bd6844c4859710eb2}\label{classcorrector_1_1_corrector_de_ejecutor_a52fe838ce34bef7bd6844c4859710eb2}} 
+\index{corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}!get\_nota\_gestion\_en\_memoria@{get\_nota\_gestion\_en\_memoria}}
+\index{get\_nota\_gestion\_en\_memoria@{get\_nota\_gestion\_en\_memoria}!corrector.CorrectorDeEjecutor@{corrector.CorrectorDeEjecutor}}
+\doxysubsubsection{\texorpdfstring{get\_nota\_gestion\_en\_memoria()}{get\_nota\_gestion\_en\_memoria()}}
+{\footnotesize\ttfamily  float corrector.\+Corrector\+De\+Ejecutor.\+get\+\_\+nota\+\_\+gestion\+\_\+en\+\_\+memoria (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve la nota de gestión en memoria. 
+
+\begin{DoxyReturn}{Returns}
+Nota (float). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+corrector.\+py\end{DoxyCompactItemize}

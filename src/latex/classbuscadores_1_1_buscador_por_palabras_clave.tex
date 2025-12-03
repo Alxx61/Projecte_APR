@@ -1,0 +1,107 @@
+\hypertarget{classbuscadores_1_1_buscador_por_palabras_clave}{}\doxysection{buscadores.\+Buscador\+Por\+Palabras\+Clave Class Reference}
+\label{classbuscadores_1_1_buscador_por_palabras_clave}\index{buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}}
+
+
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en una lista de palabras clave.  
+
+
+Inheritance diagram for buscadores.\+Buscador\+Por\+Palabras\+Clave\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbuscadores_1_1_buscador_por_palabras_clave}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave_a6a4bcd9dd0868fbcd94b796c3b08e50f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor para \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave}{Buscador\+Por\+Palabras\+Clave}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave_abe2b2dcd5d0ff55ad3a19a73c69cf0d8}{add\+\_\+palabra}} (self, palabra)
+\begin{DoxyCompactList}\small\item\em Añade una palabra clave a la lista de búsqueda. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave_a4c8d89f14cf65fc2e2a6da4f0b6d8e7a}{busca}} (self, publicaciones)
+\begin{DoxyCompactList}\small\item\em Busca en el mapa de publicaciones y devuelve una lista de aquellas cuyas palabras clave contengan {\itshape todas} las palabras clave definidas en el atributo palabras la lista de esta clase. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave_aa3cab5d30727df088f21f6b367ae5e15}{get\+\_\+palabras}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de palabras clave de búsqueda. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_palabras_clave_a913f359438098f5edd124dc0dd87eef7}\label{classbuscadores_1_1_buscador_por_palabras_clave_a913f359438098f5edd124dc0dd87eef7}} 
+def {\bfseries estan\+\_\+todas} (self, pub\+\_\+keywords\+\_\+lower)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en una lista de palabras clave. 
+
+La búsqueda requiere que la publicación contenga TODAS las palabras clave definidas en esta instancia de buscador EN MINÚ\+SCULAS. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_palabras_clave_a6a4bcd9dd0868fbcd94b796c3b08e50f}\label{classbuscadores_1_1_buscador_por_palabras_clave_a6a4bcd9dd0868fbcd94b796c3b08e50f}} 
+\index{buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Palabras\+Clave.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor para \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave}{Buscador\+Por\+Palabras\+Clave}}. 
+
+Inicializa la lista de palabras clave como una lista vacía. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_palabras_clave_abe2b2dcd5d0ff55ad3a19a73c69cf0d8}\label{classbuscadores_1_1_buscador_por_palabras_clave_abe2b2dcd5d0ff55ad3a19a73c69cf0d8}} 
+\index{buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}!add\_palabra@{add\_palabra}}
+\index{add\_palabra@{add\_palabra}!buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}}
+\doxysubsubsection{\texorpdfstring{add\_palabra()}{add\_palabra()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Palabras\+Clave.\+add\+\_\+palabra (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{palabra }\end{DoxyParamCaption})}
+
+
+
+Añade una palabra clave a la lista de búsqueda. 
+
+La palabra se convierte a minúsculas antes de ser añadida.
+
+
+\begin{DoxyParams}{Parameters}
+{\em palabra} & La palabra clave a añadir. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_palabras_clave_a4c8d89f14cf65fc2e2a6da4f0b6d8e7a}\label{classbuscadores_1_1_buscador_por_palabras_clave_a4c8d89f14cf65fc2e2a6da4f0b6d8e7a}} 
+\index{buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}!busca@{busca}}
+\index{busca@{busca}!buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}}
+\doxysubsubsection{\texorpdfstring{busca()}{busca()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Palabras\+Clave.\+busca (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicaciones }\end{DoxyParamCaption})}
+
+
+
+Busca en el mapa de publicaciones y devuelve una lista de aquellas cuyas palabras clave contengan {\itshape todas} las palabras clave definidas en el atributo palabras la lista de esta clase. 
+
+La comparación ignora mayúsculas y minúsculas (asume que las palabras en la lista interna ya están en minúsculas).
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicaciones} & El mapa completo de publicaciones (ID -\/\texorpdfstring{$>$}{>} Publicacion) sobre el cual se realizará la búsqueda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una Lista de objetos Publicacion que cumplen con todos los criterios de palabras clave. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}{buscadores.\+Buscador}}.
+
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_palabras_clave_aa3cab5d30727df088f21f6b367ae5e15}\label{classbuscadores_1_1_buscador_por_palabras_clave_aa3cab5d30727df088f21f6b367ae5e15}} 
+\index{buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}!get\_palabras@{get\_palabras}}
+\index{get\_palabras@{get\_palabras}!buscadores.BuscadorPorPalabrasClave@{buscadores.BuscadorPorPalabrasClave}}
+\doxysubsubsection{\texorpdfstring{get\_palabras()}{get\_palabras()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Palabras\+Clave.\+get\+\_\+palabras (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de palabras clave de búsqueda. 
+
+\begin{DoxyReturn}{Returns}
+La lista de palabras clave (en minúsculas). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+buscadores.\+py\end{DoxyCompactItemize}

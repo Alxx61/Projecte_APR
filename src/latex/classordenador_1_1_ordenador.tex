@@ -1,0 +1,133 @@
+\hypertarget{classordenador_1_1_ordenador}{}\doxysection{ordenador.\+Ordenador Class Reference}
+\label{classordenador_1_1_ordenador}\index{ordenador.Ordenador@{ordenador.Ordenador}}
+
+
+Clase que ordena una lista de objetos Publicacion utilizando una estrategia de comparación (Comparator) y el algoritmo de la burbuja.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_ad232a9b8df3fb813cefebc5e1dc2be73}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, descendente, comparador)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{classordenador_1_1_ordenador}{Ordenador}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_aced4cae40dfb58775049484b5881fd52}{ordena}} (self, publicaciones)
+\begin{DoxyCompactList}\small\item\em Ordena la lista de publicaciones proporcionada utilizando el algoritmo de la burbuja (Bubble Sort). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_ad808a0428cccceb82d07aa4ac8e05fb9}{set\+\_\+comparador}} (self, comparador)
+\begin{DoxyCompactList}\small\item\em Asigna el comparador. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_a81b1fe1e21fc2be3a4c604966c9891aa}{is\+\_\+descendente}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de descendente. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_a658dc76abc49a2186d5ee7d169d690b4}{set\+\_\+descendente}} (self, descendente)
+\begin{DoxyCompactList}\small\item\em Asigna valor a descendente. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classordenador_1_1_ordenador_ac684154f3335a8f23f6d9c8f7ff13ba4}{get\+\_\+comparador}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el comparador actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que ordena una lista de objetos Publicacion utilizando una estrategia de comparación (Comparator) y el algoritmo de la burbuja. 
+
+Esta clase NO modifica la lista original que recibe, sino que devuelve una nueva lista con los elementos ordenados. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_ad232a9b8df3fb813cefebc5e1dc2be73}\label{classordenador_1_1_ordenador_ad232a9b8df3fb813cefebc5e1dc2be73}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{descendente,  }\item[{}]{comparador }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \mbox{\hyperlink{classordenador_1_1_ordenador}{Ordenador}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descendente} & True si la ordenación debe ser en sentido descendente (mayor a menor), False si debe ser en sentido ascendente (menor a mayor). \\
+\hline
+{\em comparador} & El Comparator (p.\+ej., Comparador\+Autores, Comparador\+Fecha) que se utilizará para ordenar la lista. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_ac684154f3335a8f23f6d9c8f7ff13ba4}\label{classordenador_1_1_ordenador_ac684154f3335a8f23f6d9c8f7ff13ba4}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!get\_comparador@{get\_comparador}}
+\index{get\_comparador@{get\_comparador}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{get\_comparador()}{get\_comparador()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+get\+\_\+comparador (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el comparador actual. 
+
+\begin{DoxyReturn}{Returns}
+El Comparator usado para ordenar. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_a81b1fe1e21fc2be3a4c604966c9891aa}\label{classordenador_1_1_ordenador_a81b1fe1e21fc2be3a4c604966c9891aa}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!is\_descendente@{is\_descendente}}
+\index{is\_descendente@{is\_descendente}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{is\_descendente()}{is\_descendente()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+is\+\_\+descendente (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de descendente. 
+
+\begin{DoxyReturn}{Returns}
+True si es descendente, False si es ascendente. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_aced4cae40dfb58775049484b5881fd52}\label{classordenador_1_1_ordenador_aced4cae40dfb58775049484b5881fd52}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!ordena@{ordena}}
+\index{ordena@{ordena}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{ordena()}{ordena()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+ordena (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicaciones }\end{DoxyParamCaption})}
+
+
+
+Ordena la lista de publicaciones proporcionada utilizando el algoritmo de la burbuja (Bubble Sort). 
+
+El método utiliza el comparador definido en el atributo de la clase y respeta el sentido (ascendente/descendente) del atributo descendente.
+
+Este método NO modifica la lista original pasada como argumento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicaciones} & La lista de objetos Publicacion a ordenar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una {\bfseries{nueva}} lista que contiene las publicaciones ordenadas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_ad808a0428cccceb82d07aa4ac8e05fb9}\label{classordenador_1_1_ordenador_ad808a0428cccceb82d07aa4ac8e05fb9}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!set\_comparador@{set\_comparador}}
+\index{set\_comparador@{set\_comparador}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{set\_comparador()}{set\_comparador()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+set\+\_\+comparador (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{comparador }\end{DoxyParamCaption})}
+
+
+
+Asigna el comparador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comparador} & El nuevo comparador a utilizar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classordenador_1_1_ordenador_a658dc76abc49a2186d5ee7d169d690b4}\label{classordenador_1_1_ordenador_a658dc76abc49a2186d5ee7d169d690b4}} 
+\index{ordenador.Ordenador@{ordenador.Ordenador}!set\_descendente@{set\_descendente}}
+\index{set\_descendente@{set\_descendente}!ordenador.Ordenador@{ordenador.Ordenador}}
+\doxysubsubsection{\texorpdfstring{set\_descendente()}{set\_descendente()}}
+{\footnotesize\ttfamily def ordenador.\+Ordenador.\+set\+\_\+descendente (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{descendente }\end{DoxyParamCaption})}
+
+
+
+Asigna valor a descendente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descendente} & Nuevo valor de descendente. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ordenador.\+py\end{DoxyCompactItemize}

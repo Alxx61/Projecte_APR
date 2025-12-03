@@ -1,0 +1,55 @@
+\hypertarget{classbuscadores_1_1_buscador}{}\doxysection{buscadores.\+Buscador Class Reference}
+\label{classbuscadores_1_1_buscador}\index{buscadores.Buscador@{buscadores.Buscador}}
+
+
+Interfaz para un componente de búsqueda (Strategy Pattern).  
+
+
+Inheritance diagram for buscadores.\+Buscador\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.267207cm]{classbuscadores_1_1_buscador}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}{busca}} (self, publicaciones)
+\begin{DoxyCompactList}\small\item\em Ejecuta una búsqueda sobre el mapa de publicaciones proporcionado, utilizando los criterios definidos en la implementación de la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz para un componente de búsqueda (Strategy Pattern). 
+
+Define el contrato para cualquier clase que implemente una estrategia de búsqueda sobre un conjunto de publicaciones. Se espera que la clase que implemente esta interfaz almacene internamente los criterios de búsqueda específicos (p.\+ej., un autor, palabras clave, etc.). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}\label{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}} 
+\index{buscadores.Buscador@{buscadores.Buscador}!busca@{busca}}
+\index{busca@{busca}!buscadores.Buscador@{buscadores.Buscador}}
+\doxysubsubsection{\texorpdfstring{busca()}{busca()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador.\+busca (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicaciones }\end{DoxyParamCaption})}
+
+
+
+Ejecuta una búsqueda sobre el mapa de publicaciones proporcionado, utilizando los criterios definidos en la implementación de la clase. 
+
+NO LO MOFIFIQUÉ\+IS
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicaciones} & El mapa completo de publicaciones (ID -\/\texorpdfstring{$>$}{>} Publicacion) sobre el cual se realizará la búsqueda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una Lista (List) de objetos Publicacion que coinciden con los criterios de búsqueda internos de la implementación. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo_a5469ff30e6051e3496832db0ab6cd4c2}{buscadores.\+Buscador\+Por\+Intervalo}}, \mbox{\hyperlink{classbuscadores_1_1_buscador_por_nombres_a85184a65d5871326064021c5aab74a90}{buscadores.\+Buscador\+Por\+Nombres}}, and \mbox{\hyperlink{classbuscadores_1_1_buscador_por_palabras_clave_a4c8d89f14cf65fc2e2a6da4f0b6d8e7a}{buscadores.\+Buscador\+Por\+Palabras\+Clave}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+buscadores.\+py\end{DoxyCompactItemize}

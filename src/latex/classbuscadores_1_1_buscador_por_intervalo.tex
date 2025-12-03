@@ -1,0 +1,114 @@
+\hypertarget{classbuscadores_1_1_buscador_por_intervalo}{}\doxysection{buscadores.\+Buscador\+Por\+Intervalo Class Reference}
+\label{classbuscadores_1_1_buscador_por_intervalo}\index{buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}}
+
+
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en un intervalo de fechas (inclusive).  
+
+
+Inheritance diagram for buscadores.\+Buscador\+Por\+Intervalo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbuscadores_1_1_buscador_por_intervalo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo_a3c086a6f9d213d142d67537059014402}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, inicio, fin)
+\begin{DoxyCompactList}\small\item\em Constructor para \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo}{Buscador\+Por\+Intervalo}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo_a5469ff30e6051e3496832db0ab6cd4c2}{busca}} (self, publicaciones)
+\begin{DoxyCompactList}\small\item\em Busca en el mapa de publicaciones y devuelve una lista de aquellas cuya fecha de publicación esté dentro del intervalo \mbox{[}inicio, fin\mbox{]}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo_a374e003f2db787668b2e015f66d7183c}{get\+\_\+inicio}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la fecha de inicio del intervalo. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo_a254cb120682008643c9896f8cc6dc515}{get\+\_\+final}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la fecha fin del intervalo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en un intervalo de fechas (inclusive). 
+
+Las fechas (inicio y fin) deben proporcionarse en formato String \char`\"{}\+AAAAMM\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_intervalo_a3c086a6f9d213d142d67537059014402}\label{classbuscadores_1_1_buscador_por_intervalo_a3c086a6f9d213d142d67537059014402}} 
+\index{buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Intervalo.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{inicio,  }\item[{}]{fin }\end{DoxyParamCaption})}
+
+
+
+Constructor para \mbox{\hyperlink{classbuscadores_1_1_buscador_por_intervalo}{Buscador\+Por\+Intervalo}}. 
+
+Valida que las fechas tengan el formato correcto \char`\"{}\+AAAAMM\char`\"{} (6 caracteres) y que el intervalo sea coherente (fin \texorpdfstring{$>$}{>}= inicio).
+
+
+\begin{DoxyParams}{Parameters}
+{\em inicio} & El string de la fecha inicial (formato \char`\"{}\+AAAAMM\char`\"{}). \\
+\hline
+{\em fin} & El string de la fecha fin (formato \char`\"{}\+AAAAMM\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classbuscadores_1_1_intervalo_exception}{Intervalo\+Exception}}} & Si las fechas no tienen 6 caracteres (AAAAMM) o si la fecha fin es anterior a la fecha inicial. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_intervalo_a5469ff30e6051e3496832db0ab6cd4c2}\label{classbuscadores_1_1_buscador_por_intervalo_a5469ff30e6051e3496832db0ab6cd4c2}} 
+\index{buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}!busca@{busca}}
+\index{busca@{busca}!buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}}
+\doxysubsubsection{\texorpdfstring{busca()}{busca()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Intervalo.\+busca (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicaciones }\end{DoxyParamCaption})}
+
+
+
+Busca en el mapa de publicaciones y devuelve una lista de aquellas cuya fecha de publicación esté dentro del intervalo \mbox{[}inicio, fin\mbox{]}. 
+
+La comparación tiene en cuenta tanto el año como el mes mediante orden lexicográfico de cadenas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicaciones} & El mapa completo de publicaciones (ID -\/\texorpdfstring{$>$}{>} Publicacion) sobre el cual se realizará la búsqueda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una Lista de objetos Publicacion cuya fecha (\char`\"{}\+AAAAMM\char`\"{}) esté dentro del intervalo. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}{buscadores.\+Buscador}}.
+
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_intervalo_a254cb120682008643c9896f8cc6dc515}\label{classbuscadores_1_1_buscador_por_intervalo_a254cb120682008643c9896f8cc6dc515}} 
+\index{buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}!get\_final@{get\_final}}
+\index{get\_final@{get\_final}!buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}}
+\doxysubsubsection{\texorpdfstring{get\_final()}{get\_final()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Intervalo.\+get\+\_\+final (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la fecha fin del intervalo. 
+
+\begin{DoxyReturn}{Returns}
+La fecha \char`\"{}\+AAAAMM\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_intervalo_a374e003f2db787668b2e015f66d7183c}\label{classbuscadores_1_1_buscador_por_intervalo_a374e003f2db787668b2e015f66d7183c}} 
+\index{buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}!get\_inicio@{get\_inicio}}
+\index{get\_inicio@{get\_inicio}!buscadores.BuscadorPorIntervalo@{buscadores.BuscadorPorIntervalo}}
+\doxysubsubsection{\texorpdfstring{get\_inicio()}{get\_inicio()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Intervalo.\+get\+\_\+inicio (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la fecha de inicio del intervalo. 
+
+\begin{DoxyReturn}{Returns}
+La fecha \char`\"{}\+AAAAMM\char`\"{}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+buscadores.\+py\end{DoxyCompactItemize}

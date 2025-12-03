@@ -1,0 +1,102 @@
+\hypertarget{classbuscadores_1_1_buscador_por_nombres}{}\doxysection{buscadores.\+Buscador\+Por\+Nombres Class Reference}
+\label{classbuscadores_1_1_buscador_por_nombres}\index{buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}}
+
+
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en una lista de nombres de autores.  
+
+
+Inheritance diagram for buscadores.\+Buscador\+Por\+Nombres\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbuscadores_1_1_buscador_por_nombres}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_nombres_a4a69be4291bdb5372badace6bb32a4e1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor de Busca\+Por\+Nombres. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_nombres_ada34ce5f43af406e3134c2ee1d31f996}{add\+\_\+nombre}} (self, str nombre)
+\begin{DoxyCompactList}\small\item\em Añade un nombre de autor a la lista de criterios de búsqueda. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_nombres_a85184a65d5871326064021c5aab74a90}{busca}} (self, publicaciones)
+\begin{DoxyCompactList}\small\item\em Busca en el mapa de publicaciones y devuelve una lista de aquellas que tengan al menos un autor que coincida con la lista interna. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbuscadores_1_1_buscador_por_nombres_a555142cdaa0cec48bdfcd0fa04fe4740}{get\+\_\+nombres}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de nombres de autores utilizada para la búsqueda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la interfaz \mbox{\hyperlink{classbuscadores_1_1_buscador}{Buscador}} que filtra publicaciones basándose en una lista de nombres de autores. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_nombres_a4a69be4291bdb5372badace6bb32a4e1}\label{classbuscadores_1_1_buscador_por_nombres_a4a69be4291bdb5372badace6bb32a4e1}} 
+\index{buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Nombres.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor de Busca\+Por\+Nombres. 
+
+Inicializa la lista interna de nombres de autores como una lista vacía. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_nombres_ada34ce5f43af406e3134c2ee1d31f996}\label{classbuscadores_1_1_buscador_por_nombres_ada34ce5f43af406e3134c2ee1d31f996}} 
+\index{buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}!add\_nombre@{add\_nombre}}
+\index{add\_nombre@{add\_nombre}!buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}}
+\doxysubsubsection{\texorpdfstring{add\_nombre()}{add\_nombre()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Nombres.\+add\+\_\+nombre (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Añade un nombre de autor a la lista de criterios de búsqueda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & El nombre completo del autor a añadir. Debe seguir el formato \char`\"{}\+Nombre Apellidos\char`\"{} (nombre y apellidos separados por un espacio en blanco). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_nombres_a85184a65d5871326064021c5aab74a90}\label{classbuscadores_1_1_buscador_por_nombres_a85184a65d5871326064021c5aab74a90}} 
+\index{buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}!busca@{busca}}
+\index{busca@{busca}!buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}}
+\doxysubsubsection{\texorpdfstring{busca()}{busca()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Nombres.\+busca (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicaciones }\end{DoxyParamCaption})}
+
+
+
+Busca en el mapa de publicaciones y devuelve una lista de aquellas que tengan al menos un autor que coincida con la lista interna. 
+
+La comparación se realiza construyendo el nombre completo del autor de la publicación (concatenando su nombre y apellidos separados por un espacio en blanco) y comparándolo (ignorando mayúsculas/minúsculas) con los nombres de la lista interna.
+
+La búsqueda interna se detiene (para esa publicación) tan pronto como se encuentra la primera coincidencia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicaciones} & El mapa completo de publicaciones (ID -\/\texorpdfstring{$>$}{>} Publicacion) sobre el cual se realizará la búsqueda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una Lista de objetos Publicacion que coinciden con los criterios (autores) definidos. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbuscadores_1_1_buscador_aa10d438f67b67b82f40bf9793c59cebf}{buscadores.\+Buscador}}.
+
+\mbox{\Hypertarget{classbuscadores_1_1_buscador_por_nombres_a555142cdaa0cec48bdfcd0fa04fe4740}\label{classbuscadores_1_1_buscador_por_nombres_a555142cdaa0cec48bdfcd0fa04fe4740}} 
+\index{buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}!get\_nombres@{get\_nombres}}
+\index{get\_nombres@{get\_nombres}!buscadores.BuscadorPorNombres@{buscadores.BuscadorPorNombres}}
+\doxysubsubsection{\texorpdfstring{get\_nombres()}{get\_nombres()}}
+{\footnotesize\ttfamily def buscadores.\+Buscador\+Por\+Nombres.\+get\+\_\+nombres (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de nombres de autores utilizada para la búsqueda. 
+
+\begin{DoxyReturn}{Returns}
+La lista de nombres (formato \char`\"{}\+Nombre Apellidos\char`\"{}). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+buscadores.\+py\end{DoxyCompactItemize}

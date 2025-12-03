@@ -1,0 +1,163 @@
+\hypertarget{classcaosdeuso_1_1_controlador}{}\doxysection{caosdeuso.\+Controlador Class Reference}
+\label{classcaosdeuso_1_1_controlador}\index{caosdeuso.Controlador@{caosdeuso.Controlador}}
+
+
+\mbox{\hyperlink{classcaosdeuso_1_1_controlador}{Controlador}} principal de la aplicación.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_a6d7827d050244d444e6a45abbc8bdee8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{classcaosdeuso_1_1_controlador}{Controlador}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_aaa3719b4b2bb91e2df046a1156afd353}{add\+\_\+autor}} (self, autor)
+\begin{DoxyCompactList}\small\item\em Añade un autor al mapa de autores del controlador. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_aa18ba847ffa282850fdddb98c7e61cc7}{add\+\_\+publicacion}} (self, publicacion)
+\begin{DoxyCompactList}\small\item\em Añade una publicación al mapa de publicaciones. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_ad93eaf75286f9ac98a11b538102cae2a}{buscar\+\_\+y\+\_\+ordenar}} (self, ordenador)
+\begin{DoxyCompactList}\small\item\em Ejecuta una búsqueda y ordena los resultados. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_a93e4569b78f6c02bda33d1ce14715764}{get\+\_\+autores}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el mapa de autores. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_a3fed55a4970d058d8931ceb0f4cccc0d}{get\+\_\+publicaciones}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el mapa de publicaciones. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_a8d76066b28b6586225e5ebab8c581a35}{get\+\_\+buscador}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el buscador (estrategia) asignado a este controlador. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcaosdeuso_1_1_controlador_a6cec3ddda526e0529c22841135d3c42e}{set\+\_\+buscador}} (self, buscador)
+\begin{DoxyCompactList}\small\item\em Establece el buscador (estrategia) para este controlador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classcaosdeuso_1_1_controlador}{Controlador}} principal de la aplicación. 
+
+Gestiona las colecciones de autores y publicaciones, y coordina las operaciones de búsqueda y ordenación. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_a6d7827d050244d444e6a45abbc8bdee8}\label{classcaosdeuso_1_1_controlador_a6d7827d050244d444e6a45abbc8bdee8}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor de \mbox{\hyperlink{classcaosdeuso_1_1_controlador}{Controlador}}. 
+
+Inicializa los mapas (contenedores) de autores y publicaciones como colecciones vacías. Deja su atributo buscador a None. \begin{DoxyNote}{Note}
+Muy importante\+: antes de invocar al método buscar\+\_\+y\+\_\+ordenar, el atributo buscador debe referenciar a un objeto válido. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_aaa3719b4b2bb91e2df046a1156afd353}\label{classcaosdeuso_1_1_controlador_aaa3719b4b2bb91e2df046a1156afd353}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!add\_autor@{add\_autor}}
+\index{add\_autor@{add\_autor}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{add\_autor()}{add\_autor()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+add\+\_\+autor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{autor }\end{DoxyParamCaption})}
+
+
+
+Añade un autor al mapa de autores del controlador. 
+
+Utiliza el ID del autor como clave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em autor} & El objeto Autor a añadir. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_aa18ba847ffa282850fdddb98c7e61cc7}\label{classcaosdeuso_1_1_controlador_aa18ba847ffa282850fdddb98c7e61cc7}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!add\_publicacion@{add\_publicacion}}
+\index{add\_publicacion@{add\_publicacion}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{add\_publicacion()}{add\_publicacion()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+add\+\_\+publicacion (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{publicacion }\end{DoxyParamCaption})}
+
+
+
+Añade una publicación al mapa de publicaciones. 
+
+Este método comprueba la lista de autores de la publicación. Si alguno de los autores (identificado por su ID) no existe en el mapa de autores del controlador, se añade a dicho mapa automáticamente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicacion} & La publicación a añadir. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_ad93eaf75286f9ac98a11b538102cae2a}\label{classcaosdeuso_1_1_controlador_ad93eaf75286f9ac98a11b538102cae2a}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!buscar\_y\_ordenar@{buscar\_y\_ordenar}}
+\index{buscar\_y\_ordenar@{buscar\_y\_ordenar}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{buscar\_y\_ordenar()}{buscar\_y\_ordenar()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+buscar\+\_\+y\+\_\+ordenar (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ordenador }\end{DoxyParamCaption})}
+
+
+
+Ejecuta una búsqueda y ordena los resultados. 
+
+Es necesario que el atributo buscador referencie a un objeto válido. El método utiliza su atributo buscador para filtrar las publicaciones y luego utiliza el objeto ordenador proporcionado para ordenar esa lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordenador} & El objeto (estrategia) Ordenador que se utilizará para ordenar los resultados de la búsqueda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una {\bfseries{nueva}} lista de Publicacion, filtrada y ordenada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_a93e4569b78f6c02bda33d1ce14715764}\label{classcaosdeuso_1_1_controlador_a93e4569b78f6c02bda33d1ce14715764}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!get\_autores@{get\_autores}}
+\index{get\_autores@{get\_autores}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{get\_autores()}{get\_autores()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+get\+\_\+autores (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el mapa de autores. 
+
+\begin{DoxyReturn}{Returns}
+El diccionario de autores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_a8d76066b28b6586225e5ebab8c581a35}\label{classcaosdeuso_1_1_controlador_a8d76066b28b6586225e5ebab8c581a35}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!get\_buscador@{get\_buscador}}
+\index{get\_buscador@{get\_buscador}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{get\_buscador()}{get\_buscador()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+get\+\_\+buscador (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el buscador (estrategia) asignado a este controlador. 
+
+\begin{DoxyReturn}{Returns}
+El objeto Buscador o None si no se ha asignado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_a3fed55a4970d058d8931ceb0f4cccc0d}\label{classcaosdeuso_1_1_controlador_a3fed55a4970d058d8931ceb0f4cccc0d}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!get\_publicaciones@{get\_publicaciones}}
+\index{get\_publicaciones@{get\_publicaciones}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{get\_publicaciones()}{get\_publicaciones()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+get\+\_\+publicaciones (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el mapa de publicaciones. 
+
+\begin{DoxyReturn}{Returns}
+El diccionario de publicaciones. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcaosdeuso_1_1_controlador_a6cec3ddda526e0529c22841135d3c42e}\label{classcaosdeuso_1_1_controlador_a6cec3ddda526e0529c22841135d3c42e}} 
+\index{caosdeuso.Controlador@{caosdeuso.Controlador}!set\_buscador@{set\_buscador}}
+\index{set\_buscador@{set\_buscador}!caosdeuso.Controlador@{caosdeuso.Controlador}}
+\doxysubsubsection{\texorpdfstring{set\_buscador()}{set\_buscador()}}
+{\footnotesize\ttfamily def caosdeuso.\+Controlador.\+set\+\_\+buscador (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{buscador }\end{DoxyParamCaption})}
+
+
+
+Establece el buscador (estrategia) para este controlador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buscador} & El objeto Buscador. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+caosdeuso.\+py\end{DoxyCompactItemize}

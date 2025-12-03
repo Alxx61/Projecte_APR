@@ -1,0 +1,44 @@
+LIBRO;LIB-001;Clean Code: A Handbook of Agile Software Craftsmanship;200808;Robert C.:Martin:N/A;software|agile|craftsmanship|coding;Prentice Hall
+LIBRO;LIB-002;The Pragmatic Programmer: Your Journey to Mastery;199910;Andrew:Hunt:N/A|David:Thomas:N/A;programming|career|pragmatic|software;Addison-Wesley
+LIBRO;LIB-003;Design Patterns: Elements of Reusable Object-Oriented Software;199410;Erich:Gamma:N/A|Richard:Helm:N/A|Ralph:Johnson:N/A|John:Vlissides:N/A;design|patterns|gof|oop;Addison-Wesley
+ARTICULO;ART-GOF-S;Design patterns for object-oriented hypermedia;199603;Erich:Gamma:N/A|Richard:Helm:N/A;design|patterns|hypermedia;ACM Computing Surveys;6.7
+LIBRO;LIB-004;The Art of Computer Programming, Vol. 1: Fundamental Algorithms;196801;Donald:Knuth:Universidad de Stanford;algorithms|data structures|math;Addison-Wesley
+LIBRO;LIB-005;The C Programming Language;197802;Brian:Kernighan:Bell Labs|Dennis:Ritchie:Bell Labs;c|programming|k&r|systems;Prentice Hall
+LIBRO;LIB-KP-S;The Practice of Programming;199902;Brian:Kernighan:Bell Labs|Rob:Pike:Bell Labs;programming|practice|software|tools;Addison-Wesley
+ARTICULO;ART-013;The UNIX Time-Sharing System;197407;Dennis:Ritchie:Bell Labs|Ken:Thompson:Bell Labs;unix|os|systems|c;Communications of the ACM;10.1
+LIBRO;LIB-006;Compilers: Principles, Techniques, and Tools (Dragon Book);198601;Alfred:Aho:Bell Labs|Ravi:Sethi:Bell Labs|Jeffrey:Ullman:Universidad de Stanford;compilers|dragon book|parsing|cs;Addison-Wesley
+LIBRO;LIB-DRG-S;Principles of Compiler Design;197701;Alfred:Aho:Bell Labs|Jeffrey:Ullman:Universidad de Stanford;compilers|parsing|cs;Addison-Wesley
+LIBRO;LIB-007;On the Origin of Species;185911;Charles:Darwin:N/A;evolution|biology|natural selection;John Murray
+LIBRO;LIB-008;A Brief History of Time;198804;Stephen:Hawking:Universidad de Cambridge;cosmology|physics|time|black holes;Bantam Dell
+LIBRO;LIB-009;Philosophiæ Naturalis Principia Mathematica;168707;Isaac:Newton:Universidad de Cambridge;physics|math|gravity|classical mechanics;N/A
+LIBRO;LIB-010;Radio-active substances;190401;Marie:Curie:Universidad de París;radioactivity|chemistry|polonium|radium;Chemical News
+LIBRO;LIB-011;The Wealth of Nations;177603;Adam:Smith:N/A;economics|capitalism|free market;W. Strahan
+LIBRO;LIB-012;The General Theory of Employment, Interest and Money;193602;John Maynard:Keynes:Universidad de Cambridge;economics|macroeconomics|keynesian;Macmillan
+LIBRO;LIB-013;The Prince;153201;Niccolò:Machiavelli:N/A;politics|philosophy|strategy;Antonio Blado
+LIBRO;LIB-014;The Art of War;191001;Sun:Tzu:N/A;strategy|war|philosophy;N/A
+LIBRO;LIB-015;Introduction to Algorithms (CLRS);199001;Thomas H.:Cormen:MIT|Charles E.:Leiserson:MIT|Ronald L.:Rivest:MIT|Clifford:Stein:Dartmouth;algorithms|clrs|cs|data structures;MIT Press
+LIBRO;LIB-016;Structure and Interpretation of Computer Programs (SICP);198501;Harold:Abelson:MIT|Gerald Jay:Sussman:MIT;sicp|lisp|scheme|cs|mit;MIT Press
+LIBRO;LIB-017;1984;194906;George:Orwell:N/A;dystopia|fiction|politics|surveillance;Secker & Warburg
+ARTICULO;ART-001;On Computable Numbers, with an Application to the Entscheidungsproblem;193701;Alan:Turing:Universidad de Cambridge;turing machine|computation|math|entscheidungsproblem;Proceedings of the London Mathematical Society;9.5
+ARTICULO;ART-002;A Relational Model of Data for Large Shared Data Banks;197006;Edgar F.:Codd:IBM Research;database|relational|sql|data model;Communications of the ACM;12.8
+ARTICULO;ART-003;A Mathematical Theory of Communication;194807;Claude:Shannon:Bell Labs;information theory|bits|entropy|communication;Bell System Technical Journal;15.2
+ARTICULO;ART-004;Go To Statement Considered Harmful;196803;Edsger:Dijkstra:Varios;structured programming|goto|cs|coding;Communications of the ACM;5.1
+ARTICULO;ART-005;Zur Elektrodynamik bewegter Körper (On the Electrodynamics of Moving Bodies);190509;Albert:Einstein:Universidad de Berna;relativity|physics|electrodynamics|e=mc2;Annalen der Physik;22.7
+ARTICULO;ART-006;Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid;195304;James:Watson:Universidad de Cambridge|Francis:Crick:Universidad de Cambridge;dna|biology|double helix|genetics;Nature;42.8
+ARTICULO;ART-007;The Anatomy of a Large-Scale Hypertextual Web Search Engine;199804;Larry:Page:Universidad de Stanford|Sergey:Brin:Universidad de Stanford;google|search engine|pagerank|internet;Computer Networks and ISDN Systems;18.5
+ARTICULO;ART-008;Recursive Functions of Symbolic Expressions and Their Computation by Machine (LISP);196004;John:McCarthy:MIT;lisp|programming language|ai|functional;Communications of the ACM;10.2
+ARTICULO;ART-009;Computing Machinery and Intelligence (Turing Test);195010;Alan:Turing:Universidad de Cambridge;ai|turing test|intelligence|philosophy;Mind;14.1
+ARTICULO;ART-010;An integrated circuit memory (RAM);197104;Robert:Dennard:IBM;ram|memory|semiconductor|electronics;IEEE Journal of Solid-State Circuits;8.8
+ARTICULO;ART-011;A Method for the Construction of Minimum Redundancy Codes (Huffman);195209;David A.:Huffman:MIT;compression|huffman|coding|data;Proceedings of the IRE;7.3
+ARTICULO;ART-012;Ethernet: Distributed Packet Switching for Local Computer Networks;197607;Robert:Metcalfe:Xerox PARC;ethernet|networking|lan|packets;Communications of the ACM;11.9
+ARTICULO;ART-016;The Mythical Man-Month;197501;Frederick:Brooks:IBM;software engineering|management|brooks law;Addison-Wesley;13.0
+ARTICULO;ART-IA-001;Deep Learning;201505;Yann:LeCun:New York University|Yoshua:Bengio:Université de Montréal|Geoffrey:Hinton:University of Toronto;deep learning|ai|machine learning|review;Nature;42.7
+ARTICULO;ART-IA-002;ImageNet Classification with Deep Convolutional Neural Networks;201212;Alex:Krizhevsky:University of Toronto|Ilya:Sutskever:University of Toronto|Geoffrey:Hinton:University of Toronto;imagenet|cnn|deep learning|computer vision;Advances in Neural Information Processing Systems (NIPS);18.0
+ARTICULO;ART-IA-003;Gradient-Based Learning Applied to Document Recognition;199811;Yann:LeCun:New York University|Léon:Bottou:AT&T Labs|Yoshua:Bengio:Université de Montréal|Patrick:Haffner:AT&T Labs;cnn|mnist|lenet|ocr;Proceedings of the IEEE;10.5
+ARTICULO;ART-IA-004;A Neural Probabilistic Language Model;200303;Yoshua:Bengio:Université de Montréal|Réjean:Ducharme:Université de Montréal|Pascal:Vincent:Université de Montréal;nlp|language model|neural networks;Journal of Machine Learning Research (JMLR);15.2
+ARTICULO;ART-IA-005;Generative Adversarial Networks;201406;Ian:Goodfellow:Université de Montréal|Aaron:Courville:Université de Montréal|Yoshua:Bengio:Université de Montréal;gan|generative models|ai|unsupervised;Advances in Neural Information Processing Systems (NIPS);19.1
+ARTICULO;ART-OPT-001;Dropout: A Simple Way to Prevent Neural Networks from Overfitting;201401;Geoffrey:Hinton:University of Toronto|Ilya:Sutskever:University of Toronto|Nitish:Srivastava:University of Toronto|Alex:Krizhevsky:University of Toronto;dropout|regularization|neural networks|optimization;Journal of Machine Learning Research (JMLR);17.5
+ARTICULO;ART-OPT-002;On the importance of initialization and momentum in deep learning;201302;Ilya:Sutskever:University of Toronto|James:Martens:University of Toronto|Geoffrey:Hinton:University of Toronto;momentum|initialization|neural networks|optimization;Proceedings of the 30th ICML;16.2
+ARTICULO;ART-OPT-003;Stochastic Gradient Descent Tricks;201201;Léon:Bottou:AT&T Labs|Yann:LeCun:New York University|Frank:Rosenblatt:Cornell;sgd|tricks|neural networks|optimization;Neural Networks: Tricks of the Trade;11.8
+ARTICULO;ART-OPT-004;Gradient-based learning in recurrent neural networks;199401;Yoshua:Bengio:Université de Montréal|Pascal:Vincent:Université de Montréal|M.:Simard:Université de Montréal;rnn|vanishing gradient|neural networks|optimization;IEEE Transactions on Neural Networks;9.1
+ARTICULO;ART-OPT-005;A Unified View of Optimization Algorithms;201811;Yann:LeCun:New York University|Yoshua:Bengio:Université de Montréal|Geoffrey:Hinton:University of Toronto;review|adam|rmsprop|neural networks|optimization;Communications of the ACM;25.3

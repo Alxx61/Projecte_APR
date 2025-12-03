@@ -1,0 +1,176 @@
+\hypertarget{classdominio_1_1_autor}{}\doxysection{dominio.\+Autor Class Reference}
+\label{classdominio_1_1_autor}\index{dominio.Autor@{dominio.Autor}}
+
+
+Clase que representa a un autor.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a2c34b1a0db396c1767aefe3ba3c49536}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str nombre=\char`\"{}\char`\"{}, str apellidos=\char`\"{}\char`\"{}, str institucion=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor único que gestiona tanto el caso por defecto como el parametrizado. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a0be57c55d0a8f68519fdd99de25b66ab}{get\+\_\+id}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el ID único del autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_ad28803d28cef2f24de66e23c3ada240d}{get\+\_\+nombre}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre del autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a89b463e27aa1d9b545eebece59cc767b}{get\+\_\+apellidos}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene los apellidos del autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a6a3352c62f6a37dda9d76aa770bafd00}{get\+\_\+institucion}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la institución del autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a53286cad3df975f2188a413d64ce6519}{get\+\_\+publicaciones}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el mapa de publicaciones del autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a6f59e03402574460bdc499d8f546ca11}{add\+\_\+publicacion}} (self, \textquotesingle{}\mbox{\hyperlink{classdominio_1_1_publicacion}{Publicacion}}\textquotesingle{} publicacion)
+\begin{DoxyCompactList}\small\item\em Añade una publicación al mapa de publicaciones de este autor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_ac7b40566ce3ad388d35e872a6f9f64f8}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve un String con la información del autor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdominio_1_1_autor_a1702ff624586fcbdcd1d2b2b6102521a}{get\+\_\+id\+\_\+siguiente\+\_\+autor}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el contador estático para el siguiente ID de autor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa a un autor. 
+
+Gestiona la información personal del autor y mantiene un registro de sus publicaciones mediante un diccionario. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdominio_1_1_autor_a2c34b1a0db396c1767aefe3ba3c49536}\label{classdominio_1_1_autor_a2c34b1a0db396c1767aefe3ba3c49536}} 
+\index{dominio.Autor@{dominio.Autor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str }]{nombre = {\ttfamily \char`\"{}\char`\"{}},  }\item[{str }]{apellidos = {\ttfamily \char`\"{}\char`\"{}},  }\item[{str }]{institucion = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor único que gestiona tanto el caso por defecto como el parametrizado. 
+
+Asigna un ID único automáticamente e inicializa el diccionario de publicaciones. Si no se pasan argumentos, se inicializa con cadenas vacías (comportamiento del constructor por defecto de Java).
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & El nombre del autor (opcional, por defecto \char`\"{}\char`\"{}). \\
+\hline
+{\em apellidos} & Los apellidos del autor (opcional, por defecto \char`\"{}\char`\"{}). \\
+\hline
+{\em institucion} & La institución del autor (opcional, por defecto \char`\"{}\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdominio_1_1_autor_ac7b40566ce3ad388d35e872a6f9f64f8}\label{classdominio_1_1_autor_ac7b40566ce3ad388d35e872a6f9f64f8}} 
+\index{dominio.Autor@{dominio.Autor}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve un String con la información del autor. 
+
+NO MODIFICAR EL MÉ\+TODO. \begin{DoxyReturn}{Returns}
+String formateado como se indica en el documento enunciado del proyecto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_a6f59e03402574460bdc499d8f546ca11}\label{classdominio_1_1_autor_a6f59e03402574460bdc499d8f546ca11}} 
+\index{dominio.Autor@{dominio.Autor}!add\_publicacion@{add\_publicacion}}
+\index{add\_publicacion@{add\_publicacion}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{add\_publicacion()}{add\_publicacion()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+add\+\_\+publicacion (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\textquotesingle{}\mbox{\hyperlink{classdominio_1_1_publicacion}{Publicacion}}\textquotesingle{}}]{publicacion }\end{DoxyParamCaption})}
+
+
+
+Añade una publicación al mapa de publicaciones de este autor. 
+
+La clave utilizada será el ID de la publicación.
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicacion} & El objeto \mbox{\hyperlink{classdominio_1_1_publicacion}{Publicacion}} a añadir. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdominio_1_1_autor_a89b463e27aa1d9b545eebece59cc767b}\label{classdominio_1_1_autor_a89b463e27aa1d9b545eebece59cc767b}} 
+\index{dominio.Autor@{dominio.Autor}!get\_apellidos@{get\_apellidos}}
+\index{get\_apellidos@{get\_apellidos}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_apellidos()}{get\_apellidos()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+apellidos (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene los apellidos del autor. 
+
+\begin{DoxyReturn}{Returns}
+Los apellidos del autor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_a0be57c55d0a8f68519fdd99de25b66ab}\label{classdominio_1_1_autor_a0be57c55d0a8f68519fdd99de25b66ab}} 
+\index{dominio.Autor@{dominio.Autor}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el ID único del autor. 
+
+\begin{DoxyReturn}{Returns}
+El ID del autor (entero). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_a1702ff624586fcbdcd1d2b2b6102521a}\label{classdominio_1_1_autor_a1702ff624586fcbdcd1d2b2b6102521a}} 
+\index{dominio.Autor@{dominio.Autor}!get\_id\_siguiente\_autor@{get\_id\_siguiente\_autor}}
+\index{get\_id\_siguiente\_autor@{get\_id\_siguiente\_autor}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_id\_siguiente\_autor()}{get\_id\_siguiente\_autor()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+id\+\_\+siguiente\+\_\+autor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtiene el contador estático para el siguiente ID de autor. 
+
+\begin{DoxyReturn}{Returns}
+El siguiente ID a utilizar. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_a6a3352c62f6a37dda9d76aa770bafd00}\label{classdominio_1_1_autor_a6a3352c62f6a37dda9d76aa770bafd00}} 
+\index{dominio.Autor@{dominio.Autor}!get\_institucion@{get\_institucion}}
+\index{get\_institucion@{get\_institucion}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_institucion()}{get\_institucion()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+institucion (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la institución del autor. 
+
+\begin{DoxyReturn}{Returns}
+La institución del autor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_ad28803d28cef2f24de66e23c3ada240d}\label{classdominio_1_1_autor_ad28803d28cef2f24de66e23c3ada240d}} 
+\index{dominio.Autor@{dominio.Autor}!get\_nombre@{get\_nombre}}
+\index{get\_nombre@{get\_nombre}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_nombre()}{get\_nombre()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+nombre (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre del autor. 
+
+\begin{DoxyReturn}{Returns}
+El nombre del autor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_autor_a53286cad3df975f2188a413d64ce6519}\label{classdominio_1_1_autor_a53286cad3df975f2188a413d64ce6519}} 
+\index{dominio.Autor@{dominio.Autor}!get\_publicaciones@{get\_publicaciones}}
+\index{get\_publicaciones@{get\_publicaciones}!dominio.Autor@{dominio.Autor}}
+\doxysubsubsection{\texorpdfstring{get\_publicaciones()}{get\_publicaciones()}}
+{\footnotesize\ttfamily def dominio.\+Autor.\+get\+\_\+publicaciones (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el mapa de publicaciones del autor. 
+
+\begin{DoxyReturn}{Returns}
+Un diccionario (equivalente a Hash\+Map) de las publicaciones. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dominio.\+py\end{DoxyCompactItemize}

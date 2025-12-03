@@ -1,0 +1,155 @@
+\hypertarget{classdominio_1_1_publicacion}{}\doxysection{dominio.\+Publicacion Class Reference}
+\label{classdominio_1_1_publicacion}\index{dominio.Publicacion@{dominio.Publicacion}}
+
+
+Clase abstracta que define una publicación genérica.  
+
+
+Inheritance diagram for dominio.\+Publicacion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdominio_1_1_publicacion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_ae0887c0e7fe2ff0daf3ec4421df61664}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, titulo, id, autores, palabras\+\_\+clave, fecha)
+\begin{DoxyCompactList}\small\item\em Constructor parametrizado de \mbox{\hyperlink{classdominio_1_1_publicacion}{Publicacion}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_a898db15ef2279d5f44433449287debe9}{get\+\_\+titulo}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el título de la publicación. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_ae549e8ac33cba0f3cdfe82d6bc8ee7a5}{get\+\_\+id}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene el ID de la publicación. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_acfa5974b25476982c5a129594d354760}{get\+\_\+palabras\+\_\+clave}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene las palabras clave de la publicación. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_aae5e36e07452e5ad7bfa60e5681daa7b}{get\+\_\+autores}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de autores de la publicación. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_a00e476bcb0eb9e0a2be29795fdc2720a}{get\+\_\+fecha}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la fecha de publicación (formato \char`\"{}\+AAAAMM\char`\"{}). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdominio_1_1_publicacion_aef627db9a797dcab62ea69e323d99988}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Genera la representación en String de los atributos comunes de todos los tipos de publicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase abstracta que define una publicación genérica. 
+
+Define los atributos comunes y la estructura base para libros y artículos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_ae0887c0e7fe2ff0daf3ec4421df61664}\label{classdominio_1_1_publicacion_ae0887c0e7fe2ff0daf3ec4421df61664}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{titulo,  }\item[{}]{id,  }\item[{}]{autores,  }\item[{}]{palabras\+\_\+clave,  }\item[{}]{fecha }\end{DoxyParamCaption})}
+
+
+
+Constructor parametrizado de \mbox{\hyperlink{classdominio_1_1_publicacion}{Publicacion}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em titulo} & El título de la publicación. \\
+\hline
+{\em id} & El identificador único de la publicación. \\
+\hline
+{\em autores} & La lista de autores (objetos de la clase \mbox{\hyperlink{classdominio_1_1_autor}{Autor}}). \\
+\hline
+{\em palabras\+\_\+clave} & Una lista de palabras clave. \\
+\hline
+{\em fecha} & La fecha de publicación (formato \char`\"{}\+AAAAMM\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classdominio_1_1_libro_a53b764d36927060f0f7baf00cca0fd5b}{dominio.\+Libro}}, and \mbox{\hyperlink{classdominio_1_1_articulo_en_revista_a3213e7b52dd7e96123dfe199ba74f489}{dominio.\+Articulo\+En\+Revista}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_aef627db9a797dcab62ea69e323d99988}\label{classdominio_1_1_publicacion_aef627db9a797dcab62ea69e323d99988}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Genera la representación en String de los atributos comunes de todos los tipos de publicación. 
+
+NO MODIFICAR EL MÉ\+TODO. \begin{DoxyReturn}{Returns}
+String formateado como se indica en el documento enunciado del proyecto 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classdominio_1_1_libro_aeb55e75b561f678aa901d2a30c8de0bc}{dominio.\+Libro}}, and \mbox{\hyperlink{classdominio_1_1_articulo_en_revista_a2d8fed14c7adc9ed49198a9a9de0d924}{dominio.\+Articulo\+En\+Revista}}.
+
+\mbox{\Hypertarget{classdominio_1_1_publicacion_aae5e36e07452e5ad7bfa60e5681daa7b}\label{classdominio_1_1_publicacion_aae5e36e07452e5ad7bfa60e5681daa7b}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!get\_autores@{get\_autores}}
+\index{get\_autores@{get\_autores}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{get\_autores()}{get\_autores()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+get\+\_\+autores (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de autores de la publicación. 
+
+\begin{DoxyReturn}{Returns}
+Una lista de objetos \mbox{\hyperlink{classdominio_1_1_autor}{Autor}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_a00e476bcb0eb9e0a2be29795fdc2720a}\label{classdominio_1_1_publicacion_a00e476bcb0eb9e0a2be29795fdc2720a}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!get\_fecha@{get\_fecha}}
+\index{get\_fecha@{get\_fecha}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{get\_fecha()}{get\_fecha()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+get\+\_\+fecha (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la fecha de publicación (formato \char`\"{}\+AAAAMM\char`\"{}). 
+
+\begin{DoxyReturn}{Returns}
+La fecha (AAAAMM). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_ae549e8ac33cba0f3cdfe82d6bc8ee7a5}\label{classdominio_1_1_publicacion_ae549e8ac33cba0f3cdfe82d6bc8ee7a5}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+get\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el ID de la publicación. 
+
+\begin{DoxyReturn}{Returns}
+El ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_acfa5974b25476982c5a129594d354760}\label{classdominio_1_1_publicacion_acfa5974b25476982c5a129594d354760}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!get\_palabras\_clave@{get\_palabras\_clave}}
+\index{get\_palabras\_clave@{get\_palabras\_clave}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{get\_palabras\_clave()}{get\_palabras\_clave()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+get\+\_\+palabras\+\_\+clave (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene las palabras clave de la publicación. 
+
+\begin{DoxyReturn}{Returns}
+Una lista de String con las palabras clave. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdominio_1_1_publicacion_a898db15ef2279d5f44433449287debe9}\label{classdominio_1_1_publicacion_a898db15ef2279d5f44433449287debe9}} 
+\index{dominio.Publicacion@{dominio.Publicacion}!get\_titulo@{get\_titulo}}
+\index{get\_titulo@{get\_titulo}!dominio.Publicacion@{dominio.Publicacion}}
+\doxysubsubsection{\texorpdfstring{get\_titulo()}{get\_titulo()}}
+{\footnotesize\ttfamily def dominio.\+Publicacion.\+get\+\_\+titulo (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene el título de la publicación. 
+
+\begin{DoxyReturn}{Returns}
+El título. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dominio.\+py\end{DoxyCompactItemize}

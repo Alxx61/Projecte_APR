@@ -1,0 +1,77 @@
+\hypertarget{classcomparadores_1_1_comparador_apellidos}{}\doxysection{comparadores.\+Comparador\+Apellidos Class Reference}
+\label{classcomparadores_1_1_comparador_apellidos}\index{comparadores.ComparadorApellidos@{comparadores.ComparadorApellidos}}
+
+
+Implementación de \mbox{\hyperlink{classcomparadores_1_1_comparator}{Comparator}} para ordenar objetos Publicacion.  
+
+
+Inheritance diagram for comparadores.\+Comparador\+Apellidos\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcomparadores_1_1_comparador_apellidos}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcomparadores_1_1_comparador_apellidos_a082a07ab4d0468c23fa9d6c6c7129b8a}{compare}} (self, p1, p2)
+\begin{DoxyCompactList}\small\item\em Compara dos publicaciones basándose en el primer apellido (según orden alfabético) de sus respectivas listas de autores. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcomparadores_1_1_comparador_apellidos_a4f8f3dcd5141e322877a5df3c7b5b548}{get\+\_\+primer\+\_\+apellido}} (self, pub)
+\begin{DoxyCompactList}\small\item\em Método de utilidad para encontrar el apellido lexicográficamente menor (el primero alfabéticamente) en la lista de autores de una publicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de \mbox{\hyperlink{classcomparadores_1_1_comparator}{Comparator}} para ordenar objetos Publicacion. 
+
+La comparación se basa en el autor de cada publicación que tenga el apellido lexicográficamente menor (el primero en orden alfabético). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcomparadores_1_1_comparador_apellidos_a082a07ab4d0468c23fa9d6c6c7129b8a}\label{classcomparadores_1_1_comparador_apellidos_a082a07ab4d0468c23fa9d6c6c7129b8a}} 
+\index{comparadores.ComparadorApellidos@{comparadores.ComparadorApellidos}!compare@{compare}}
+\index{compare@{compare}!comparadores.ComparadorApellidos@{comparadores.ComparadorApellidos}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily def comparadores.\+Comparador\+Apellidos.\+compare (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p1,  }\item[{}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Compara dos publicaciones basándose en el primer apellido (según orden alfabético) de sus respectivas listas de autores. 
+
+Para cada publicación (p1 y p2), primero encuentra el autor cuyo apellido sea lexicográficamente el menor. Luego, compara esos dos apellidos resultantes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & La primera publicación a comparar. \\
+\hline
+{\em p2} & La segunda publicación a comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un valor negativo si el apellido de p1 es anterior, positivo si es posterior, o 0 si son iguales o si ambas no tienen autores. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcomparadores_1_1_comparator_a56252f6521b20d261491c3f53ada3d97}{comparadores.\+Comparator}}.
+
+\mbox{\Hypertarget{classcomparadores_1_1_comparador_apellidos_a4f8f3dcd5141e322877a5df3c7b5b548}\label{classcomparadores_1_1_comparador_apellidos_a4f8f3dcd5141e322877a5df3c7b5b548}} 
+\index{comparadores.ComparadorApellidos@{comparadores.ComparadorApellidos}!get\_primer\_apellido@{get\_primer\_apellido}}
+\index{get\_primer\_apellido@{get\_primer\_apellido}!comparadores.ComparadorApellidos@{comparadores.ComparadorApellidos}}
+\doxysubsubsection{\texorpdfstring{get\_primer\_apellido()}{get\_primer\_apellido()}}
+{\footnotesize\ttfamily def comparadores.\+Comparador\+Apellidos.\+get\+\_\+primer\+\_\+apellido (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pub }\end{DoxyParamCaption})}
+
+
+
+Método de utilidad para encontrar el apellido lexicográficamente menor (el primero alfabéticamente) en la lista de autores de una publicación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pub} & La publicación de la cual extraer los autores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El apellido lexicográficamente menor, o None si la publicación no tiene autores o ningún autor tiene apellido. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+comparadores.\+py\end{DoxyCompactItemize}

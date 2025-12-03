@@ -1,0 +1,86 @@
+\hypertarget{classrunner_1_1_ejecutor_desde_memoria}{}\doxysection{runner.\+Ejecutor\+Desde\+Memoria Class Reference}
+\label{classrunner_1_1_ejecutor_desde_memoria}\index{runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}}
+
+
+Clase que ejecuta un escenario de prueba predefinido en memoria.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrunner_1_1_ejecutor_desde_memoria_ae08e942df00dc4e63bd076125e6e14bc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classrunner_1_1_ejecutor_desde_memoria_ab09842738e928d6d2c71c0673fc84aee}{get\+\_\+resultado}} (self)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de resultados acumulados. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classrunner_1_1_ejecutor_desde_memoria_a4ff07a443fd74cb32b04681d230ad99d}{ejecuta}} (self)
+\begin{DoxyCompactList}\small\item\em Ejecuta el escenario de prueba completo de búsqueda y ordenación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que ejecuta un escenario de prueba predefinido en memoria. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrunner_1_1_ejecutor_desde_memoria_ae08e942df00dc4e63bd076125e6e14bc}\label{classrunner_1_1_ejecutor_desde_memoria_ae08e942df00dc4e63bd076125e6e14bc}} 
+\index{runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def runner.\+Ejecutor\+Desde\+Memoria.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Crea el atributo resultado como una lista vacía. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrunner_1_1_ejecutor_desde_memoria_a4ff07a443fd74cb32b04681d230ad99d}\label{classrunner_1_1_ejecutor_desde_memoria_a4ff07a443fd74cb32b04681d230ad99d}} 
+\index{runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}!ejecuta@{ejecuta}}
+\index{ejecuta@{ejecuta}!runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}}
+\doxysubsubsection{\texorpdfstring{ejecuta()}{ejecuta()}}
+{\footnotesize\ttfamily def runner.\+Ejecutor\+Desde\+Memoria.\+ejecuta (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Ejecuta el escenario de prueba completo de búsqueda y ordenación. 
+
+El proceso detallado es el siguiente\+:
+\begin{DoxyEnumerate}
+\item Creará un objeto Controlador.
+\item Obtendrá las publicaciones invocando al método \mbox{\hyperlink{classgestordatos_1_1_gestor_de_datos_add464c1ea2923974f9a2e382e42bc9ca}{Gestor\+De\+Datos.\+cargar\+\_\+publicaciones\+\_\+de\+\_\+prueba()}}.
+\item Añadirá estas publicaciones al Controlador.
+\item Realizará una búsqueda de publicaciones por el nombre \char`\"{}\+Geoffrey Hinton\char`\"{}.
+\item Generará una lista con las publicaciones encontradas ordenadas por fecha en sentido ascendente.
+\item Para cada publicación de la lista generará un String invocando al método {\bfseries{str}}() y lo añadirá al atributo resultado.
+\item Generará una lista con las publicaciones encontradas ordenadas por fecha en sentido descendente.
+\item Para cada publicación de la lista generará un String y lo añadirá al resultado.
+\item Generará una lista con las publicaciones encontradas ordenadas por autor en sentido ascendente.
+\item Para cada publicación de la lista generará un String y lo añadirá al resultado.
+\item Generará una lista con las publicaciones encontradas ordenadas por autor en sentido descendente.
+\item Para cada publicación de la lista generará un String y lo añadirá al resultado.
+\item Realizará una búsqueda de publicaciones por las siguientes palabras clave\+: \char`\"{}neural networks\char`\"{} y \char`\"{}optimization\char`\"{} (una sola búsqueda\+: se buscan publicaciones que contengan ambos valores).
+\item Repetirá los pasos 5 a 12 para la lista de publicaciones obtenidas.
+\item Realizará una búsqueda de publicaciones cuya fecha de publicación esté dentro del intervalo \char`\"{}197001\char`\"{} y \char`\"{}198012\char`\"{}.
+\item Repetirá los pasos 5 a 12 para la lista de publicaciones obtenidas.
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+PODÉ\+IS DEFINIROS AQUEL(\+LOS) MÉ\+TODO(\+S) ADICIONAL(\+ES) QUE CONSIDERÉ\+IS OPORTUNO PARA ORGANIZAR EL CÓ\+DIGO DE ESTA CLASE. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classrunner_1_1_ejecutor_desde_memoria_ab09842738e928d6d2c71c0673fc84aee}\label{classrunner_1_1_ejecutor_desde_memoria_ab09842738e928d6d2c71c0673fc84aee}} 
+\index{runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}!get\_resultado@{get\_resultado}}
+\index{get\_resultado@{get\_resultado}!runner.EjecutorDesdeMemoria@{runner.EjecutorDesdeMemoria}}
+\doxysubsubsection{\texorpdfstring{get\_resultado()}{get\_resultado()}}
+{\footnotesize\ttfamily def runner.\+Ejecutor\+Desde\+Memoria.\+get\+\_\+resultado (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de resultados acumulados. 
+
+\begin{DoxyReturn}{Returns}
+Lista de strings con el to\+String() de las publicaciones encontradas. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+runner.\+py\end{DoxyCompactItemize}
