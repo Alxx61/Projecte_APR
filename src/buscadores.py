@@ -131,8 +131,10 @@ class BuscadorPorNombres(Buscador):
     def busca(self,publicaciones):
         resultat = []
         for publicacion in publicaciones.values():
-            if publicacion in self.nombres: 
-                resultat.append(publicacion)
+            for autor in  publicacion.get_autores():
+                nombre = autor.get_nombre() + " " + autor.get_apellidos()
+                if nombre in self.nombres: 
+                    resultat.append(publicacion)
         return resultat
     # --- Getters ---
 
