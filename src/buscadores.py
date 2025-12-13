@@ -177,8 +177,9 @@ class BuscadorPorPalabrasClave(Buscador):
     #  con todos los criterios de palabras clave.
     def busca(self,publicaciones):
         resultat = []
-        if self.palabras_clave in publicaciones:
-            resultat.append(publicaciones)
+        for publicacion in publicaciones.values():
+            if self.palabras_clave in publicacion:
+                resultat.append(publicacion)
 
         return resultat
         
