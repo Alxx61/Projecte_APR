@@ -57,7 +57,7 @@ class BuscadorPorIntervalo(Buscador):
     #  @throws IntervaloException Si las fechas no tienen 6 caracteres
     #  (AAAAMM) o si la fecha fin es anterior a la fecha inicial.
     def __init__(self,inicio,fin):
-        if fin<inicio or len(inicio)!=6 or len(fin)!=6:
+        if int(fin)<int(inicio) or len(inicio)!=6 or len(fin)!=6:
             raise IntervaloException
         else:
             self.inicio = inicio
