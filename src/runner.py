@@ -61,4 +61,9 @@ class EjecutorDesdeMemoria:
     #  CONSIDERÉIS OPORTUNO PARA ORGANIZAR EL CÓDIGO DE ESTA CLASE.
 
     def ejecuta(self):
-        raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
+        publicaciones=GestorDeDatos.cargar_publicaciones_de_prueba()
+        for publicacion in publicaciones:
+            self.añadir_publicacion(publicacion)
+
+        publicacion_h=self.buscar_por_autor("Geoffrey Hinton")
+
