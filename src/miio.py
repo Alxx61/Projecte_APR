@@ -40,4 +40,19 @@ class LectorPublicaciones:
     #  publicación.
     @staticmethod
     def leer(nombre_archivo):
-        raise Exception("\n--->LectorPublicaciones::leer. NO IMPLEMENTADO!!!\n")
+        dic = {}
+        file =  open(nombre_archivo, "r")
+        for i in file.readlines():
+            autor_lista = []  # objectes de classe autor
+            print(i)
+            temp = i.split("_DELIM_CAMPO") # temp es una llista
+            autores = temp[4].split("_DELIM_LISTA") # llista de autors separada per | nom:cognom:cognom
+            for k in autores:
+                autor = Autor(k[0],k[1]) #nom i primer cognom
+                autor_lista.append(autor)
+            pub  = Publicacion(temp[2],temp[1],autor_lista,temp[3])#titulo, id, autores, palabras_clave, fecha
+            dic[temp[1]] = pub
+
+
+        return dic
+
