@@ -2,6 +2,8 @@
 #  @brief Módulo para la gestión de referencias bibliográficas.
 #  @details Contiene las clases necesarias para gestionar autores, libros y artículos
 #  usando el estilo de comentarios especiales de Doxygen.
+from typing import Any
+
 
 # Usamos 'Publicacion' como string para el type hinting (Forward declaration)
 # asumiendo que la clase estará disponible en tiempo de ejecución.
@@ -164,14 +166,14 @@ class Libro(Publicacion):
     #  @param palabras_clave lista de palabras clave (strings).
     #  @param fecha Año y mes de publicación.
     #  @param editorial La editorial del libro.
-    def __init__(self, titulo: str, id: str, autores, palabras_clave, fecha, editorial):
+    def __init__(self, titulo, id, autores, palabras_clave, fecha, editorial):
         self.titulo=titulo
         self.id=id
         self.autores=autores
         self.palabras_clave=palabras_clave
         self.fecha=fecha
         self.editorial=editorial
-        raise Exception("\n--->Libro::__init__. NO IMPLEMENTADO!!!\n")
+        #raise Exception("\n--->Libro::__init__. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene la editorial del libro.
     #  @return La editorial.

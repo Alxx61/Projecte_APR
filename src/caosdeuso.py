@@ -27,7 +27,7 @@ class Controlador:
     #  en el mapa de autores del controlador, se añade a dicho mapa automáticamente.
     #
     #  @param publicacion La publicación a añadir.
-    def add_publicacion(self,publicacion):
+    def add_publicacion(self, publicacion):
         for autor in publicacion.autors:
             if autor not in self.autores:
                 self.autores[autor.id]=autor
