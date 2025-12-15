@@ -189,9 +189,10 @@ class BuscadorPorPalabrasClave(Buscador):
     ## @brief Obtiene la lista de palabras clave de búsqueda.
     #  @return La lista de palabras clave (en minúsculas).
     def get_palabras(self):
-        return self.palabras_clave
+        return self.palabras_clave.lower()
 
         #raise Exception("\n--->BuscadorPorPalabrasClave::get_palabras. NO IMPLEMENTADO!!!\n")
 
     def estan_todas(self,pub_keywords_lower):
-        raise Exception("\n--->BuscadorPorPalabrasClave::estan_todas. NO IMPLEMENTADO!!!\n")
+        pass
+        #raise Exception("\n--->BuscadorPorPalabrasClave::estan_todas. NO IMPLEMENTADO!!!\n")
