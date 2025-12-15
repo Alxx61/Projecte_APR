@@ -23,45 +23,50 @@ class Autor:
     #  @param apellidos Los apellidos del autor (opcional, por defecto "").
     #  @param institucion La institución del autor (opcional, por defecto "").
     def __init__(self,nombre: str = "",apellidos: str = "",institucion: str = ""):
-        raise Exception("\n--->Autor::__init__. NO IMPLEMENTADO!!!\n")
+        self.ID=Autor._id_siguiente_autor
+        Autor._id_siguiente_autor+=1
+        self.nombre=nombre
+        self.apellidos=apellidos
+        self.institucion=institucion
+        self.publicaciones={}
 
     ## @brief Obtiene el ID único del autor.
     #  @return El ID del autor (entero).
     def get_id(self):
-        raise Exception("\n--->Autor::get_id. NO IMPLEMENTADO!!!\n")
+        return self.ID
 
     ## @brief Obtiene el nombre del autor.
     #  @return El nombre del autor.
     def get_nombre(self) :
-        raise Exception("\n--->Autor::get_nombre. NO IMPLEMENTADO!!!\n")
+        return self.nombre
 
     ## @brief Obtiene los apellidos del autor.
     #  @return Los apellidos del autor.
     def get_apellidos(self):
-        raise Exception("\n--->Autor::get_apellidos. NO IMPLEMENTADO!!!\n")
+        return self.apellidos
 
     ## @brief Obtiene la institución del autor.
     #  @return La institución del autor.
     def get_institucion(self):
-        raise Exception("\n--->Autor::get_institucion. NO IMPLEMENTADO!!!\n")
+        return self.institucion
 
     ## @brief Obtiene el mapa de publicaciones del autor.
     #  @return Un diccionario (equivalente a HashMap) de las publicaciones.
     def get_publicaciones(self) :
-        raise Exception("\n--->Autor::get_publicaciones. NO IMPLEMENTADO!!!\n")
+        return self.publicaciones
 
     ## @brief Obtiene el contador estático para el siguiente ID de autor.
     #  @return El siguiente ID a utilizar.
     @staticmethod
     def get_id_siguiente_autor():
-        raise Exception("\n--->Autor::get_id_siguiente_autor. NO IMPLEMENTADO!!!\n")
+        return Autor._id_siguiente_autor
 
     ## @brief Añade una publicación al mapa de publicaciones de este autor.
     #  @details La clave utilizada será el ID de la publicación.
     #
     #  @param publicacion El objeto Publicacion a añadir.
     def add_publicacion(self,publicacion: 'Publicacion'):
-        raise Exception("\n--->Autor::add_publicacion. NO IMPLEMENTADO!!!\n")
+        self.publicaciones[publicacion.ID]=publicacion
 
     ## @brief Devuelve un String con la información del autor.
     #  @details NO MODIFICAR EL métode.
@@ -87,31 +92,39 @@ class Publicacion:
     #  @param palabras_clave Una lista de palabras clave.
     #  @param fecha La fecha de publicación (formato "AAAAMM").
     def __init__(self, titulo, id, autores, palabras_clave, fecha):
-        raise Exception("\n--->Publicacion::__init__. NO IMPLEMENTADO!!!\n")
+        self.titulo=titulo
+        self.id=id
+        self.autores=autores
+        self.palabras_clave=palabras_clave
+        self.fecha=fecha
 
     ## @brief Obtiene el título de la publicación.
     #  @return El título.
     def get_titulo(self):
-        raise Exception("\n--->Publicacion::get_titulo. NO IMPLEMENTADO!!!\n")
+        return self.titulo
 
     ## @brief Obtiene el ID de la publicación.
     #  @return El ID.
     def get_id(self):
+        return self.id
         raise Exception("\n--->Publicacion::get_id. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene las palabras clave de la publicación.
     #  @return Una lista de String con las palabras clave.
     def get_palabras_clave(self):
+        return self.palabras_clave
         raise Exception("\n--->Publicacion::get_palabras_clave. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene la lista de autores de la publicación.
     #  @return Una lista de objetos Autor.
     def get_autores(self) :
+        return self.autores
         raise Exception("\n--->Publicacion::get_autores. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene la fecha de publicación (formato "AAAAMM").
     #  @return La fecha (AAAAMM).
     def get_fecha(self):
+        return self.fecha
         raise Exception("\n--->Publicacion::get_fecha. NO IMPLEMENTADO!!!\n")
 
     ## @brief Genera la representación en String de los atributos comunes de
@@ -123,18 +136,18 @@ class Publicacion:
         # Se verifica si la lista existe y tiene contenido.
         # Se usa comprension de lista para convertir cada objeto Autor a string.
         txt_autores = ""
-        if self._autores:
-            txt_autores = "|".join([str(autor) for autor in self._autores])
+        if self.autores:
+            txt_autores = "|".join([str(autor) for autor in self.autores])
 
         # 2. Formatear la lista de Palabras Clave
         txt_palabras = ""
-        if self._palabras_clave:
-            txt_palabras = "|".join(self._palabras_clave)
+        if self.palabras_clave:
+            txt_palabras = "|".join(self.palabras_clave)
 
         # 3. Construcción final
         # Se mantiene la etiqueta "palabrasClave" en el string para coincidir con Java,
         # aunque la variable interna sea pythonica (_palabras_clave).
-        return (f"id={self._id}; titulo={self._titulo}; fecha={self._fecha}; "
+        return (f"id={self.id}; titulo={self.titulo}; fecha={self.fecha}; "
                 f"autores=[{txt_autores}]; palabrasClave=[{txt_palabras}]")
 
 # Asumimos que Publicacion y Autor están importados o disponibles en el namespace
@@ -152,18 +165,25 @@ class Libro(Publicacion):
     #  @param fecha Año y mes de publicación.
     #  @param editorial La editorial del libro.
     def __init__(self, titulo: str, id: str, autores, palabras_clave, fecha, editorial):
+        self.titulo=titulo
+        self.id=id
+        self.autores=autores
+        self.palabras_clave=palabras_clave
+        self.fecha=fecha
+        self.editorial=editorial
         raise Exception("\n--->Libro::__init__. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene la editorial del libro.
     #  @return La editorial.
     def get_editorial(self):
+        return self.editorial
         raise Exception("\n--->Libro::get_editorial. NO IMPLEMENTADO!!!\n")
 
     ## @brief Devuelve una representación en String completa del Libro.
     #  @details NO MODIFICAR EL métode.
     #  @return String formateado como se indica en el documento enunciado del proyecto
     def __str__(self):
-        return f"Libro;{super().__str__()}; editorial={self._editorial}"
+        return f"Libro;{super().__str__()}; editorial={self.editorial}"
 
 
 
@@ -183,16 +203,26 @@ class ArticuloEnRevista(Publicacion):
     #  @param revista El nombre de la revista.
     def __init__(self,titulo,id,autores,palabras_clave,
                  fecha,factor_impacto,revista):
-        raise Exception("\n--->ArticuloEnRevista::__init__. NO IMPLEMENTADO!!!\n")
+        self.titulo=titulo
+        self.id=id
+        self.autores=autores
+        self.palabras_clave=palabras_clave
+        self.fecha=fecha
+        self.factor_impacto=factor_impacto
+        self.revista=revista
+
+
 
     ## @brief Obtiene el factor de impacto de la revista.
     #  @return El factor de impacto.
     def get_factor_impacto(self):
+        return self.factor_impacto
         raise Exception("\n--->ArticuloEnRevista::get_factor_impacto. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene el nombre de la revista.
     #  @return El nombre de la revista.
     def get_revista(self):
+        return self.revista
         raise Exception("\n--->ArticuloEnRevista::get_revista. NO IMPLEMENTADO!!!\n")
 
     ## @brief Devuelve una representación en String completa del Artículo.
@@ -202,4 +232,4 @@ class ArticuloEnRevista(Publicacion):
         # Utilizamos super().__str__() para traer la cadena de la clase padre
         # y f-strings para formatear el resto exactamente como en Java.
         return (f"ArticuloEnRevista;{super().__str__()}, "
-                f"factorImpacto={self._factor_impacto}; revista={self._revista}")
+                f"factorImpacto={self.factor_impacto}; revista={self.revista}")

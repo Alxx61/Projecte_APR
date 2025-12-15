@@ -9,14 +9,17 @@ class Controlador:
     #  @note Muy importante: antes de invocar al métode buscar_y_ordenar,
     #  el atributo buscador debe referenciar a un objeto válido.
     def __init__(self):
-        raise Exception("\n--->Controlador::__init__. NO IMPLEMENTADO!!!\n")
+        self.autores={}
+        self.publicaciones={}
+        self.buscador=None
 
     ## @brief Añade un autor al mapa de autores del controlador.
     #  Utiliza el ID del autor como clave.
     #
     #  @param autor El objeto Autor a añadir.
     def add_autor(self,autor):
-        raise Exception("\n--->Controlador::__init__. NO IMPLEMENTADO!!!\n")
+        self.autores[autor.id]=autor
+
 
     ## @brief Añade una publicación al mapa de publicaciones.
     #  @details Este métode comprueba la lista de autores de la publicación.
@@ -25,7 +28,12 @@ class Controlador:
     #
     #  @param publicacion La publicación a añadir.
     def add_publicacion(self,publicacion):
-        raise Exception("\n--->Controlador::__init__. NO IMPLEMENTADO!!!\n")
+        for autor in publicacion.autors:
+            if autor not in self.autores:
+                self.autores[autor.id]=autor
+        if publicacion.id not in self.publicaciones:
+            self.publicaciones[publicacion.id]=publicacion
+
 
     ## @brief Ejecuta una búsqueda y ordena los resultados.
     #  @details Es necesario que el atributo buscador referencie a un objeto válido.
@@ -36,26 +44,29 @@ class Controlador:
     #  utilizará para ordenar los resultados de la búsqueda.
     #  @return Una <b>nueva</b> lista de Publicacion, filtrada y ordenada.
     def buscar_y_ordenar(self,ordenador):
-        raise Exception("\n--->Controlador::buscar_y_ordenar. NO IMPLEMENTADO!!!\n")
+        lista=self.buscador.filtrar(self.buscador)
+        lista_ordenada=ordenador.ordenar(lista)
+        return lista_ordenada
 
     # --- Getters y Setters ---
 
     ## @brief Obtiene el mapa de autores.
     #  @return El diccionario de autores.
     def get_autores(self):
-        raise Exception("\n--->Controlador::get_autores. NO IMPLEMENTADO!!!\n")
+        return self.autores
+
 
     ## @brief Obtiene el mapa de publicaciones.
     #  @return El diccionario de publicaciones.
     def get_publicaciones(self):
-        raise Exception("\n--->Controlador::get_publicaciones. NO IMPLEMENTADO!!!\n")
+        return self.publicaciones
 
     ## @brief Obtiene el buscador (estrategia) asignado a este controlador.
     #  @return El objeto Buscador o None si no se ha asignado.
     def get_buscador(self):
-        raise Exception("\n--->Controlador::get_buscador. NO IMPLEMENTADO!!!\n")
+        return self.buscador
 
     ## @brief Establece el buscador (estrategia) para este controlador.
     #  @param buscador El objeto Buscador.
     def set_buscador(self,buscador):
-        raise Exception("\n--->Controlador::set_buscador. NO IMPLEMENTADO!!!\n")
+        self.buscador=buscador

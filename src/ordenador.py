@@ -16,7 +16,8 @@ class Ordenador:
     #  @param comparador El Comparator (p.ej., ComparadorAutores, ComparadorFecha)
     #  que se utilizará para ordenar la lista.
     def __init__(self,descendente,comparador):
-        raise Exception("\n--->Ordenador::__init__. NO IMPLEMENTADO!!!\n")
+        self.descendente = descendente
+        self.comparador = comparador
 
     ## @brief Ordena la lista de publicaciones proporcionada utilizando el algoritmo
     #  de la burbuja (Bubble Sort).
@@ -28,26 +29,42 @@ class Ordenador:
     #  @param publicaciones La lista de objetos Publicacion a ordenar.
     #  @return Una <b>nueva</b> lista que contiene las publicaciones ordenadas.
     def ordena(self,publicaciones):
-        raise Exception("\n--->Ordenador::ordena. NO IMPLEMENTADO!!!\n")
+        lista=publicaciones[:]
+        for i in range(len(publicaciones)-1):
+            for j in range(0,len(publicaciones)-i-1):
+                p1=lista[j]
+                p2=lista[j+1]
+                resultado=self.comparador.compare(p1,p2)
+                enc=False
+                if not self.descendente:
+                    if resultado>0:
+                        enc=True
+                else:
+                    if resultado<0:
+                        enc=True
+                if enc==True:
+                    lista[j],lista[j+1]=lista[j+1],lista[j]
+        return lista
 
     # --- Getters y Setters ---
 
     ## @brief Asigna el comparador.
     #  @param comparador El nuevo comparador a utilizar.
     def set_comparador(self,comparador):
-        raise Exception("\n--->Ordenador::set_comparador. NO IMPLEMENTADO!!!\n")
+        self.comparador = comparador
 
     ## @brief Devuelve el valor de descendente.
     #  @return True si es descendente, False si es ascendente.
     def is_descendente(self):
-        raise Exception("\n--->Ordenador::is_descendente. NO IMPLEMENTADO!!!\n")
+        return self.descendente
 
     ## @brief Asigna valor a descendente.
     #  @param descendente Nuevo valor de descendente.
     def set_descendente(self,descendente):
-        raise Exception("\n--->Ordenador::set_descendente. NO IMPLEMENTADO!!!\n")
+        self.descendente = descendente
+
 
     ## @brief Obtiene el comparador actual.
     #  @return El Comparator usado para ordenar.
     def get_comparador(self):
-        raise Exception("\n--->Ordenador::get_comparador. NO IMPLEMENTADO!!!\n")
+        return self.comparador
