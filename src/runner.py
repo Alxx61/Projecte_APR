@@ -15,11 +15,13 @@ class EjecutorDesdeMemoria:
     ## @brief Constructor.
     #  @details Crea el atributo resultado como una lista vacía.
     def __init__(self):
-        raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
+        self.resultados=[]
+
 
     ## @brief Obtiene la lista de resultados acumulados.
     #  @return Lista de strings con el toString() de las publicaciones encontradas.
     def get_resultado(self):
+        return self.resultados
         raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
 
     ## @brief Ejecuta el escenario de prueba completo de búsqueda y ordenación.
@@ -59,4 +61,9 @@ class EjecutorDesdeMemoria:
     #  CONSIDERÉIS OPORTUNO PARA ORGANIZAR EL CÓDIGO DE ESTA CLASE.
 
     def ejecuta(self):
-        raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
+        publicaciones=GestorDeDatos.cargar_publicaciones_de_prueba()
+        for publicacion in publicaciones:
+            self.añadir_publicacion(publicacion)
+
+        publicacion_h=self.buscar_por_autor("Geoffrey Hinton")
+

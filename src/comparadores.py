@@ -44,7 +44,23 @@ class ComparadorApellidos(Comparator):
     #  @return Un valor negativo si el apellido de p1 es anterior,
     #  positivo si es posterior, o 0 si son iguales o si ambas no tienen autores.
     def compare(self,p1,p2):
-        raise Exception("\n--->ComparadorApellidos::compare. NO IMPLEMENTADO!!!\n")
+        apellido_min1=p1.autores[0].apellidos
+        for i in range(1,len(p1.autores)):
+            autor=p1.autores[i]
+            if autor.apellido<apellido_min1:
+                apellido_min1=autor.apellido
+        apellido_min2=p2.autores[0].apellidos
+        for i in range(1,len(p2.autores)):
+            auto=p2.autores[i]
+            if auto.apellido<apellido_min2:
+                apellido_min2=auto.apellido
+        if apellido_min1<apellido_min2:
+            return -1
+        elif apellido_min1>apellido_min2:
+            return 1
+        else:
+            return 0
+
 
     ## @brief métode de utilidad para encontrar el apellido lexicográficamente
     #  menor (el primero alfabéticamente) en la lista de autores de
@@ -54,8 +70,11 @@ class ComparadorApellidos(Comparator):
     #  @return El apellido lexicográficamente menor, o None si la
     #  publicación no tiene autores o ningún autor tiene apellido.
     def get_primer_apellido(self,pub):
-        raise Exception("\n--->ComparadorApellidos::get_primer_apellido. NO IMPLEMENTADO!!!\n")
-
+        apellido=None
+        for autor in pub.autores:
+            if autor.apellido<apellido:
+                apellido=autor.apellido
+        return apellido
 
 from typing import Optional
 
@@ -81,4 +100,11 @@ class ComparadorFechas(Comparator):
     #  cero si las fechas son iguales,
     #  o un entero positivo si la fecha de p1 es posterior a la de p2.
     def compare(self,p1,p2):
-        raise Exception("\n--->ComparadorFechas::compare. NO IMPLEMENTADO!!!\n")
+        fecha1=p1.fecha
+        fecha2=p2.fecha
+        if fecha1<fecha2:
+            return -1
+        elif fecha1>fecha2:
+            return 1
+        else:
+            return 0

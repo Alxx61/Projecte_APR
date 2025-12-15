@@ -57,7 +57,7 @@ class BuscadorPorIntervalo(Buscador):
     #  @throws IntervaloException Si las fechas no tienen 6 caracteres
     #  (AAAAMM) o si la fecha fin es anterior a la fecha inicial.
     def __init__(self,inicio,fin):
-        if fin<inicio or len(inicio)!=6 or len(fin)!=6:
+        if int(fin)<int(inicio) or len(inicio)!=6 or len(fin)!=6:
             raise IntervaloException
         else:
             self.inicio = inicio
@@ -155,15 +155,15 @@ class BuscadorPorPalabrasClave(Buscador):
     ## @brief Constructor para BuscadorPorPalabrasClave.
     #  Inicializa la lista de palabras clave como una lista vacía.
     def __init__(self):
-        palabras_clave = [] #raise Exception("\n--->BuscadorPorPalabrasClave::__init__. NO IMPLEMENTADO!!!\n")
+        self.palabras_clave = [] #raise Exception("\n--->BuscadorPorPalabrasClave::__init__. NO IMPLEMENTADO!!!\n")
 
     ## @brief Añade una palabra clave a la lista de búsqueda.
     #  La palabra se convierte a minúsculas antes de ser añadida.
     #
     #  @param palabra La palabra clave a añadir.
     def add_palabra(self,palabra):
-        palabra = lower(palabra) #raise Exception("\n--->BuscadorPorPalabrasClave::add_palabra. NO IMPLEMENTADO!!!\n")
-        palabras_clave.append(palabra)
+        palabra = palabra.lower #raise Exception("\n--->BuscadorPorPalabrasClave::add_palabra. NO IMPLEMENTADO!!!\n")
+        self.palabras_clave.append(palabra)
 
     ## @brief Busca en el mapa de publicaciones y devuelve una lista de aquellas
     #  cuyas palabras clave contengan *todas* las palabras clave definidas
@@ -176,16 +176,23 @@ class BuscadorPorPalabrasClave(Buscador):
     #  @return Una Lista de objetos Publicacion que cumplen
     #  con todos los criterios de palabras clave.
     def busca(self,publicaciones):
-        raise Exception("\n--->BuscadorPorPalabrasClave::__init__. NO IMPLEMENTADO!!!\n")
+        resultat = []
+        for publicacion in publicaciones.values():
+            if all(palabra in publicacion for palabra in self.palabras_clave):
+                resultat.append(publicacion)
+
+        return resultat
+        #raise Exception("\n--->BuscadorPorPalabrasClave::__init__. NO IMPLEMENTADO!!!\n")
 
     # --- Getters ---
 
     ## @brief Obtiene la lista de palabras clave de búsqueda.
     #  @return La lista de palabras clave (en minúsculas).
     def get_palabras(self):
-        return palabras_clave
+        return self.palabras_clave.lower()
 
-        #raise Exception("\n--->BuscadorPorPalabrasClave::get_palabras. NO IMPLEMENTADO!!!\n")
+       
 
     def estan_todas(self,pub_keywords_lower):
-        raise Exception("\n--->BuscadorPorPalabrasClave::estan_todas. NO IMPLEMENTADO!!!\n")
+        pass
+        
