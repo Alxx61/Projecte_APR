@@ -16,14 +16,14 @@ class EjecutorDesdeMemoria:
     ## @brief Constructor.
     #  @details Crea el atributo resultado como una lista vacía.
     def __init__(self):
-        self.resultados=[]
+        self.resultado=[]
 
 
     ## @brief Obtiene la lista de resultados acumulados.
     #  @return Lista de strings con el toString() de las publicaciones encontradas.
     def get_resultado(self):
-        return self.resultados
-        raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
+        return self.resultado
+        #raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
 
     ## @brief Ejecuta el escenario de prueba completo de búsqueda y ordenación.
     #

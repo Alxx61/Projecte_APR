@@ -28,11 +28,10 @@ class Controlador:
     #
     #  @param publicacion La publicación a añadir.
     def add_publicacion(self, publicacion):
-        for autor in publicacion.get_autors():
-            if autor not in self.autores:
-                self.autores[autor.get_id()]=autor
-        if publicacion.get_id() not in self.publicaciones:
-            self.publicaciones[publicacion.get_id()]=publicacion
+        self.publicaciones[publicacion.get_id()] = publicacion
+        for autor in publicacion.get_autores():
+            if autor.get_id() not in self.autores:
+                self.add_autor(autor)
 
 
     ## @brief Ejecuta una búsqueda y ordena los resultados.
