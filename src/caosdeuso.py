@@ -32,7 +32,7 @@ class Controlador:
     #  @param publicacion La publicación a añadir.
     def add_publicacion(self, publicacion):
         self.publicaciones[publicacion.get_id()]=publicacion
-        autores=publicacion.get_autor()
+        autores=publicacion.get_autores()
         if autores:
             for autor in autores:
                 if autor.get_id() not in self.autores:
