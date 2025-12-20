@@ -82,13 +82,12 @@ class ComparadorApellidos(Comparator):
     #  publicación no tiene autores o ningún autor tiene apellido.
     def get_primer_apellido(self,pub):
         
-        apellido=str("")
+        apellido=str("") #TODO: Arreglar aixo
         for autor in pub.get_autores():
             if autor.get_apellidos()<apellido:
                apellido=autor.get_apellidos() 
                 
         return apellido
-
 from typing import Optional
 
 

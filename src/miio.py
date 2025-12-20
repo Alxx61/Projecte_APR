@@ -41,7 +41,7 @@ class LectorPublicaciones:
     @staticmethod
     def leer(nombre_archivo):
         dic = {}
-        file =  open(nombre_archivo, "r")
+        file =  open(nombre_archivo, "r", encoding="utf-8")
         for i in file.readlines():
             autor_lista = []  # objectes de classe autor
             print(i)
@@ -57,11 +57,11 @@ class LectorPublicaciones:
             if temp[0] == "LIBRO":
                 #      TIPO;ID;TITULO;FECHA_AAAAMM;AUTORES;PALABRAS_CLAVE;EDITORIAL
                 pub  = Libro(temp[2],temp[1],autor_lista,palabras_clave, temp[3], temp[6])#titulo, id, autores, palabras_clave, fecha
-            elif temp[0] == "ARTICULO":
+            elif temp[0] == "ARTICULO": # articulo te 2 params addicionals pero no dona eror
                 pub = ArticuloEnRevista(temp[2],temp[1],autor_lista ,palabras_clave, temp[3], float(temp[7]), temp[6])
 
             dic[temp[1]] = pub
 
 
-        return dic
+        return dic # parser funciona 10/10 no tocar
 
