@@ -199,13 +199,8 @@ class ArticuloEnRevista(Publicacion):
     #  @param fecha Año y mes de publicación.
     #  @param factor_impacto El factor de impacto de la revista (float).
     #  @param revista El nombre de la revista.
-    def __init__(self,titulo,id,autores,palabras_clave,
-                 fecha,factor_impacto,revista):
-        self.titulo=titulo
-        self.id=id
-        self.autores=autores
-        self.palabras_clave=palabras_clave
-        self.fecha=fecha
+    def __init__(self,titulo,id,autores,palabras_clave,fecha,factor_impacto,revista):
+        super().__init__(titulo, id, autores, palabras_clave, fecha)
         self.factor_impacto=factor_impacto
         self.revista=revista
 
@@ -215,13 +210,13 @@ class ArticuloEnRevista(Publicacion):
     #  @return El factor de impacto.
     def get_factor_impacto(self):
         return self.factor_impacto
-        raise Exception("\n--->ArticuloEnRevista::get_factor_impacto. NO IMPLEMENTADO!!!\n")
+        #raise Exception("\n--->ArticuloEnRevista::get_factor_impacto. NO IMPLEMENTADO!!!\n")
 
     ## @brief Obtiene el nombre de la revista.
     #  @return El nombre de la revista.
     def get_revista(self):
         return self.revista
-        raise Exception("\n--->ArticuloEnRevista::get_revista. NO IMPLEMENTADO!!!\n")
+        #raise Exception("\n--->ArticuloEnRevista::get_revista. NO IMPLEMENTADO!!!\n")
 
     ## @brief Devuelve una representación en String completa del Artículo.
     #  @details NO MODIFICAR EL métode.
