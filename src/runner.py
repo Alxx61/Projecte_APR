@@ -62,7 +62,50 @@ class EjecutorDesdeMemoria:
     #  CONSIDERÉIS OPORTUNO PARA ORGANIZAR EL CÓDIGO DE ESTA CLASE.
 
     def ejecuta(self):
-        publicaciones=GestorDeDatos.cargar_publicaciones_de_prueba()
+        controlador = Controlador()
+        datos = GestorDeDatos.cargar_publicaciones_de_prueba()
+        for pub in datos.values():
+            controlador.add_publicacion(pub)
+
+        # 4
+        buscador_nombres = BuscadorPorNombres()
+        buscador_nombres.add_nombre("Geoffrey Hinton")
+        controlador.set_buscador(buscador_nombres)
+
+        # 5-12
+        self._ejecutar_ciclo_ordenacion(controlador)
+
+        # 13-14
+        buscador_tags = BuscadorPorPalabrasClave()
+        buscador_tags.add_palabra("neural networks")
+        buscador_tags.add_palabra("optimization")
+        controlador.set_buscador(buscador_tags)
+        self._ejecutar_ciclo_ordenacion(controlador)
+
+        # 15-16
+        buscador_fecha = BuscadorPorIntervalo("197001", "198012")
+        controlador.set_buscador(buscador_fecha)
+        self._ejecutar_ciclo_ordenacion(controlador)
+
+    def _ejecutar_ciclo_ordenacion(self, controlador):
+        #Pasos 5-12
+        configs = [
+            (ComparadorFechas(), False),
+            (ComparadorFechas(), True),
+            (ComparadorApellidos(), False),
+            (ComparadorApellidos(), True)
+        ]
+
+        for comp, desc in configs:
+            ordenador = Ordenador(desc, comp)
+            lista = controlador.buscar_y_ordenar(ordenador)
+            for p in lista:
+                self.resultado.append(str(p))
+
+
+
+
+        """publicaciones=GestorDeDatos.cargar_publicaciones_de_prueba()
         controlador=Controlador()
         for i in publicaciones:
             self.add_publicacion=controlador.add_publicacion(i)
@@ -84,7 +127,7 @@ class EjecutorDesdeMemoria:
         publicacion_fecha=self.buscar_por_fecha("197001","198012")
         self._repetir_ordenaciones(publicacion_fecha)
 
-        return self.resultado
+        return self.resultado"""
 
 
 

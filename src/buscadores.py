@@ -179,12 +179,19 @@ class BuscadorPorPalabrasClave(Buscador):
     #  @return Una Lista de objetos Publicacion que cumplen
     #  con todos los criterios de palabras clave.
     def busca(self,publicaciones):
-        resultat = []
+        res = []
+        for publicacion in publicaciones.values():
+            if set(self.palabras_clave).issubset(set(publicacion.get_palabras_clave())):
+                res.append(publicacion)
+        return res
+
+
+        """resultat = []
         for publicacion in publicaciones.values():
             if all(palabra in publicacion for palabra in self.palabras_clave):
                 resultat.append(publicacion)
 
-        return resultat
+        return resultat"""
         #raise Exception("\n--->BuscadorPorPalabrasClave::__init__. NO IMPLEMENTADO!!!\n")
 
     # --- Getters ---
