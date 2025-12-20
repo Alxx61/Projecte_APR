@@ -25,7 +25,7 @@ class Autor:
     #  @param apellidos Los apellidos del autor (opcional, por defecto "").
     #  @param institucion La institución del autor (opcional, por defecto "").
     def __init__(self,nombre: str = "",apellidos: str = "",institucion: str = ""):
-        self.ID=Autor._id_siguiente_autor
+        self.ID=self._id_siguiente_autor
         Autor._id_siguiente_autor+=1
         self.nombre=nombre
         self.apellidos=apellidos
