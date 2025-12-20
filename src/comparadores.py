@@ -102,8 +102,8 @@ class ComparadorFechas(Comparator):
     #  cero si las fechas son iguales,
     #  o un entero positivo si la fecha de p1 es posterior a la de p2.
     def compare(self,p1,p2):
-        fecha1=p1.fecha
-        fecha2=p2.fecha
+        fecha1=p1.get_fecha()
+        fecha2=p2.get_fecha()
         if fecha1<fecha2:
             return -1
         elif fecha1>fecha2:
