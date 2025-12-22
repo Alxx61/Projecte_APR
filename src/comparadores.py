@@ -81,8 +81,10 @@ class ComparadorApellidos(Comparator):
     #  @return El apellido lexicográficamente menor, o None si la
     #  publicación no tiene autores o ningún autor tiene apellido.
     def get_primer_apellido(self,pub):
-        
-        apellido=str("") #TODO: Arreglar aixo
+        autores = pub.get_autores()
+        if not autores: # si no n'hi han
+            return None
+        apellido = autores[0].get_apellidos() # inicialitzar al primer appellido, el error era que la cadena "" sempre era mes petit
         for autor in pub.get_autores():
             if autor.get_apellidos()<apellido:
                apellido=autor.get_apellidos() 
