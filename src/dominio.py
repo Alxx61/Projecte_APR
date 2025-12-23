@@ -109,25 +109,25 @@ class Publicacion:
     #  @return El ID.
     def get_id(self):
         return self.id
-        #raise Exception("\n--->Publicacion::get_id. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Obtiene las palabras clave de la publicación.
     #  @return Una lista de String con las palabras clave.
     def get_palabras_clave(self):
         return self.palabras_clave
-        #raise Exception("\n--->Publicacion::get_palabras_clave. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Obtiene la lista de autores de la publicación.
     #  @return Una lista de objetos Autor.
     def get_autores(self) :
         return self.autores
-        #raise Exception("\n--->Publicacion::get_autores. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Obtiene la fecha de publicación (formato "AAAAMM").
     #  @return La fecha (AAAAMM).
     def get_fecha(self):
         return self.fecha
-        #raise Exception("\n--->Publicacion::get_fecha. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Genera la representación en String de los atributos comunes de
     #  todos los tipos de publicación.
@@ -169,13 +169,13 @@ class Libro(Publicacion):
     def __init__(self, titulo, id, autores, palabras_clave, fecha, editorial):
         super().__init__(titulo, id, autores, palabras_clave, fecha)
         self.editorial=editorial
-        #raise Exception("\n--->Libro::__init__. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Obtiene la editorial del libro.
     #  @return La editorial.
     def get_editorial(self):
         return self.editorial
-        #raise Exception("\n--->Libro::get_editorial. NO IMPLEMENTADO!!!\n")
+       
 
     ## @brief Devuelve una representación en String completa del Libro.
     #  @details NO MODIFICAR EL métode.
@@ -210,13 +210,13 @@ class ArticuloEnRevista(Publicacion):
     #  @return El factor de impacto.
     def get_factor_impacto(self):
         return self.factor_impacto
-        #raise Exception("\n--->ArticuloEnRevista::get_factor_impacto. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Obtiene el nombre de la revista.
     #  @return El nombre de la revista.
     def get_revista(self):
         return self.revista
-        #raise Exception("\n--->ArticuloEnRevista::get_revista. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Devuelve una representación en String completa del Artículo.
     #  @details NO MODIFICAR EL métode.
