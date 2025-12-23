@@ -54,25 +54,6 @@ class ComparadorApellidos(Comparator):
        else:
            return 0
 
-
-       """ apellido_min1=p1.autores[0].apellidos
-        for i in range(1,len(p1.autores)):
-            autor=p1.autores[i]
-            if autor.apellido<apellido_min1:
-                apellido_min1=autor.apellido
-        apellido_min2=p2.autores[0].apellidos
-        for i in range(1,len(p2.autores)):
-            auto=p2.autores[i]
-            if auto.apellido<apellido_min2:
-                apellido_min2=auto.apellido
-        if apellido_min1<apellido_min2:
-            return -1
-        elif apellido_min1>apellido_min2:
-            return 1
-        else:
-            return 0"""
-
-
     ## @brief métode de utilidad para encontrar el apellido lexicográficamente
     #  menor (el primero alfabéticamente) en la lista de autores de
     #  una publicación.
