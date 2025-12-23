@@ -23,7 +23,7 @@ class EjecutorDesdeMemoria:
     #  @return Lista de strings con el toString() de las publicaciones encontradas.
     def get_resultado(self):
         return self.resultado
-        #raise Exception("\n--->EjecutorDesdeMemoria::__init__. NO IMPLEMENTADO!!!\n")
+        
 
     ## @brief Ejecuta el escenario de prueba completo de búsqueda y ordenación.
     #
@@ -101,33 +101,6 @@ class EjecutorDesdeMemoria:
             lista = controlador.buscar_y_ordenar(ordenador)
             for p in lista:
                 self.resultado.append(str(p))
-
-
-
-
-        """publicaciones=GestorDeDatos.cargar_publicaciones_de_prueba()
-        controlador=Controlador()
-        for i in publicaciones:
-            self.add_publicacion=controlador.add_publicacion(i)
-
-        self.resultado.append("--- Publicaciones cargadas inicialmente ---")
-        self.resultado.extend([str(p) for p in self.publicacion])
-
-        self.resultado.append("BUSQUEDA 1: Autor 'Geoffrey Hinton'")
-
-        publicacion_h=self.buscar_por_autor("Geoffrey Hinton")
-        self._repetir_ordenaciones(publicacion_h)
-
-        self.resultados.append("BUSQUEDA 2:Palabras clave 'neural networks' y 'optimization'")
-        palabras_clave=["neural networks", "optimization"]
-        publicacion_keywords=self.buscar_por_palabras_clave(palabras_clave)
-        self._repetir_ordenaciones(publicacion_keywords)
-
-        self.resultado.append("BUSQUEDA 3:Intervalo de fecha '197001' a '198012'")
-        publicacion_fecha=self.buscar_por_fecha("197001","198012")
-        self._repetir_ordenaciones(publicacion_fecha)
-
-        return self.resultado"""
 
 
 
